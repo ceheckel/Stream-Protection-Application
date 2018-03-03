@@ -1,0 +1,29 @@
+body {
+    background-color: #dddddd;
+}
+#main {
+    background-color: #cccccc;
+    height: 100%;
+}
+
+.title {
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.itemLabel {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.itemTextbox {
+    width: 100%;
+    height: 30px;
+}
+
+.formRow {
+    margin-bottom: 8px;
+    padding: 10px 0 10px 0;
+    background: #dddddd;
+}

@@ -1,9 +1,17 @@
 body {
     background-color: #dddddd;
 }
-#main {
+
+#siteConditons {
     background-color: #cccccc;
     height: 100%;
+    display:none;
+}
+
+#doAndph {
+    background-color: #cccccc;
+    height: 100%;
+    display:none;
 }
 
 .title {
@@ -26,4 +34,17 @@ body {
     margin-bottom: 8px;
     padding: 10px 0 10px 0;
     background: #dddddd;
+}
+
+.volunteerRow {
+    background-color: #cccccc;
+    padding: 5px 0 3px 0;
+}
+
+.volunteerRowBottom {
+    border-bottom: 1px solid black;
+}
+
+.volunteerBtnContainer {
+    margin-top: 5px;
 }

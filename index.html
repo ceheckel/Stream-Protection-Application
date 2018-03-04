@@ -14,41 +14,233 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        <link rel="stylesheet" href="style.css">
     </head>
     <body style="font-size:14px">
-        <div id="main"  class="container col-md-offset-3 col-md-6">     
+
+        <!-- Site Conditions-->
+        <div id="siteConditons" class="container col-md-offset-3 col-md-6">     
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Site Conditions</p></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Weather</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="weather" /></div>
+                <div class="col-xs-6">
+                    <select id="weather">
+                        <option value="1">Fair Skies</option>
+                        <option value="2">Overcast</option>
+                        <option value="3">Haze</option>
+                        <option value="4">Fog</option>
+                        <option value="5">Drizzle</option>
+                        <option value="6">Intermittent Rain</option>
+                        <option value="7">Moderate Rain</option>
+                        <option value="8">Heavy Rain</option>
+                        <option value="9">Snow/Sleet/Rain</option>
+                    </select>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Wind Speed</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6">
+                    <select id="windSpeed">
+                        <option value="1">Calm</option>
+                        <option value="2">Light Air</option>
+                        <option value="3">Light Breeze</option>
+                        <option value="4">Leave/Twigs Move</option>
+                        <option value="5">Branches Move</option>
+                        <option value="6">Small Trees Sway</option>
+                        <option value="7">Large branches Sway</option>
+                        <option value="8">Hard to Walk</option>
+                        <option value="9">Other (High Wind)</option>
+                    </select>                
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Wind Direction</div>
-                <!-- <div class="col-xs-7"><input class="itemTextbox" type="text" id="siteName" /></div> -->
+                <div class="col-xs-7">
+                    <select id="windDirection">
+                        <option value="N">North</option>
+                        <option value="NE">Northeast</option>
+                        <option value="E">East </option>
+                        <option value="SE">Southeast</option>
+                        <option value="S">South</option>
+                        <option value="SW">Southwest</option>
+                        <option value="W">West</option>
+                        <option value="NW">Northwest</option>
+                    </select> 
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stream Stage</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6">
+                    <select id="streamStage">
+                        <option value="1">Dry</option>
+                        <option value="2">No Flow</option>
+                        <option value="3">Trace</option>
+                        <option value="4">Low Flow</option>
+                        <option value="5">Base Flow</option>
+                        <option value="6">Slightly Elevated</option>
+                        <option value="7">Elevated</option>
+                        <option value="8">Elevated/No Flow</option>
+                        <option value="9">High Flow</option>
+                    </select>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stage Qualifier</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6">
+                    <select id="stageQualifier">
+                        <option value="1">Stable</option>
+                        <option value="2">Rising</option>
+                        <option value="3">Falling</option>
+                        <option value="4">Unknown</option>
+                    </select>
+                </div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Secchi Depth</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="itemLabel col-xs-6">Secchi Depth (Meters.)</div>
+                <div class="col-xs-6">
+                    <input class="itemTextbox" type="number" min="0" id="siteName" />
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Air Temp. (C)</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6">
+                    <input class="itemTextbox" type="number" id="siteName" />
+                </div>
             </div><div class="row formRow">
                 <div class="itemLabel col-xs-6">Water Temp. (C)</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6">
+                    <input class="itemTextbox" type="number" id="siteName" />
+                </div>
             </div>
         </div>
+
+        <!-- DO & pH -->
+        <div id="doAndph" class="container col-md-offset-3 col-md-6">     
+            <div class="row title">
+                <div class="col-md-12"><p class="text-center">DO & pH</p></div>
+            </div>
+            <div class="row formRow">
+                <div class="itemLabel col-xs-12">DO Test 1</div>
+                <div class="col-xs-12"><p>DO (Run) <input type="number" id="test1DO"/> mg/L DO</p></div>
+                <div class="col-xs-12"><p>Comment <input type="text" id="test1DOComment"/></p></div>                                                                                                     
+            </div>
+            <div class="row formRow">
+                <div class="itemLabel col-xs-12">DO Test 2</div>
+                <div class="col-xs-12"><p>DO (Run) <input type="number" id="test2DO"/> mg/L DO</p></div>
+                <div class="col-xs-12"><p>Comment <input type="text" id="test2DOComment"/></p></div>                                                                
+            </div>
+            <div class="row formRow">
+                <div class="itemLabel col-xs-12">pH Test 1</div>
+                <div class="col-xs-12"><p>pH <input type="number" id="test1pH"/> SU</p></div>
+                <div class="col-xs-12"><p>Comment <input type="text" id="test1pHComment"/></p></div>                                                
+            </div>
+            <div class="row formRow">
+                <div class="itemLabel col-xs-12">pH Test 2</div>
+                <div class="col-xs-12"><p>pH<input type="number" id="test2pH"/> SU</p></div>
+                <div class="col-xs-12"><p>Comment <input type="text" id="test2pHComment"/></p></div>                                                    
+            </div>
+        </div>
+
+    <!-- Volunteers -->
+    <div id="volunteers" class="container col-md-offset-3 col-md-6">  
+        <div id="volunteerHolder">
+            <div class="row title">
+                <div class="col-md-12"><p class="text-center">Volunteers</p></div>
+            </div>
+            <div class="row volunteerRow">
+                <div class="itemLabel col-xs-6">Name</div>
+                <div class="col-xs-6">
+                    <input type="text" id="volunteerName_0"/>
+                </div>
+            </div>
+            <div class="row volunteerRow">
+                <div class="itemLabel col-xs-6">Date</div>
+                <div class="col-xs-6">
+                    <input type="date" id="volunteerDate_0"/>
+                </div>
+            </div>
+            <div class="row volunteerRow">
+                <div class="itemLabel col-xs-6">Activity</div>
+                <div class="col-xs-6">
+                    <input type="text" id="volunteerActivity_0"/>
+                </div>
+            </div>
+            <div class="row volunteerRow volunteerRowBottom">
+                <div class="itemLabel col-xs-6">Hours</div>
+                <div class="col-xs-6">
+                    <input type="number" id="volunteerHour_0"/>
+                </div>
+            </div>
+        </div>   
+        <div class="row volunteerBtnContainer">
+            <div class="col-md-12 text-center"><button id="addVolunteer">Add Volunteer</button></div>
+        </div>
+        <div class="row volunteerBtnContainer">
+                <div class="col-md-12 text-center"><button id="removeVolunteer">Remove Last Volunteer</button></div>
+            </div>
+        <input type='hidden' value='0' id='volunteerCount' />
+    </div>
+
+
+<script>
+
+    //TODO: after removing added ones and then readding new ones you can't remove them 
+    // because the number is incorrect. 
+
+    $('#addVolunteer').on('click touch', function() {
+
+        // get count of volunteer
+        var volunteerCount = parseInt($("#volunteerCount").val()) + 1;
+        
+        // max 10 volunteers
+        if (volunteerCount > 9) {
+            alert("Max volunteers met!");
+            return;
+        } 
+
+        // create html for volunteer form
+        var volunteerHTML = "<div id='volunteerInput_" + volunteerCount + "'>" +
+            "<div class='row volunteerRow'>" +
+                "<div class='itemLabel col-xs-6'>Name</div>" +
+                "<div class='col-xs-6'>" +
+                    "<input type='text' id='volunteerName_" + volunteerCount + "'/>" +
+                "</div>" +
+            "</div>" +
+            "<div class='row volunteerRow'>" +
+                "<div class='itemLabel col-xs-6'>Date</div>" +
+                "<div class='col-xs-6'>" +
+                    "<input type='date' id='volunteerDate_" + volunteerCount + "'/>" +
+                "</div>" +
+            "</div>" +
+            "<div class='row volunteerRow'>" +
+                "<div class='itemLabel col-xs-6'>Activity</div>" +
+                "<div class='col-xs-6'>" +
+                    "<input type='text' id='volunteerActivity_" + volunteerCount + "'/>" +
+                "</div>" +
+            "</div>" +
+            "<div class='row volunteerRow volunteerRowBottom'>" +
+                "<div class='itemLabel col-xs-6'>Hours</div>" +
+                "<div class='col-xs-6'>" +
+                    "<input type='number' id='volunteerHour_" + volunteerCount + "'/>" +
+                "</div>" +
+            "</div>" +
+        "</div>";
+        
+        $("#volunteerCount").val(volunteerCount);
+        $("#volunteerHolder").append(volunteerHTML);
+    });
+
+
+    $('#removeVolunteer').on('click touch', function() {
+        // get count of volunteer
+        var volunteerCount = parseInt($("#volunteerCount").val());
+
+        if (volunteerCount != 0) {
+           $("#volunteerInput_" + volunteerCount).fadeOut();
+           $("#volunteerCount").val(volunteerCount - 1);
+        }
+    });
+
+</script>
+
     </body>
 </html>

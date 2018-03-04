@@ -225,8 +225,15 @@
             "</div>" +
         "</div>";
         
+        // put html into volenteerHolder div
         $("#volunteerCount").val(volunteerCount);
         $("#volunteerHolder").append(volunteerHTML);
+
+        // scroll down page to show removeVolenteer btn
+        $('html, body').animate({
+         scrollTop: $("#removeVolunteer").offset().top
+     }, 1000);
+     
     });
 
 
@@ -236,6 +243,7 @@
 
         if (volunteerCount != 0) {
            $("#volunteerInput_" + volunteerCount).fadeOut();
+           $("#volunteerInput_" + volunteerCount).remove();
            $("#volunteerCount").val(volunteerCount - 1);
         }
     });

@@ -1,29 +1,123 @@
 body {
-    background-color: #dddddd;
+    background-color: #397bae;
+    color: rgb(51, 51, 51);
 }
-#main {
-    background-color: #cccccc;
-    height: 100%;
+
+#home {
+    display: visible;
+}
+
+#newLogStart {
+    display: none;
+}
+#siteConditons {
+    display: none;
+}
+
+#doAndph {
+    display: none;
+}
+
+#observations {
+    display: none;
+}
+
+#nitrogen {
+    display: none;
+}
+
+#bacteria {
+    display: none;
+}
+
+#phosphorus {
+    display: none;
+}
+
+#volunteers {
+    display: none;
 }
 
 .title {
-    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     font-weight: bolder;
     font-size: xx-large;
+    color: #FFFFF0;
+    background-color: #397bae;
 }
 
 .itemLabel {
     font-size: x-large;
-    font-weight: bold;
+    font-weight: 500;
+    color: #FFFFF0;
 }
 
 .itemTextbox {
+    border-radius: 5px;
+    color: black;
     width: 100%;
     height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 8px;
 }
 
 .formRow {
-    margin-bottom: 8px;
     padding: 10px 0 10px 0;
-    background: #dddddd;
+    background: #74b1d2;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.651);
+}
+
+.btnRow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #397bae;
+
+}
+
+.volunteerRow {
+    background-color: #74b1d2;
+    padding: 5px 0 3px 0;
+}
+
+.volunteerRowBottom {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.volunteerBtnContainer {
+    margin-top: 5px;
+    background: #397bae;
+}
+
+@media only screen and (max-device-width: 769px) {
+    select {
+        border-radius: 5px;
+        color: black;
+        width: 100%;
+        height: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        padding-left: 8px;
+         /* make arrow and background */
+         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #FFF;
+         -webkit-appearance: none;
+         background-position-x: calc(100% - 8px);
+    }
+}
+
+
+@media only screen and (min-device-width: 770px) {
+    body {
+        background: #6398be;
+        display: flex;
+    }
+
+    #main {
+        background: #397bae;
+        width: 75%;
+        display: flex;
+        margin: 0 auto;
+    }
 }

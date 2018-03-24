@@ -60,11 +60,11 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Site Name</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="site_name" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">WBID Number</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="wbidNumber" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="wbid" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Legal</div>
@@ -80,23 +80,23 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Lat</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="lat" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="number" id="latitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Long</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="long" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="number" id="longitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Time</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="time" id="time" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="time" id="site_time" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Sampler 1</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler1" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler_1" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Sampler 2</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler2" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler_2" /></div>
             </div>
             <div class="row btnRow">
                 <div class="col-md-12 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -128,7 +128,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Wind Speed</div>
                 <div class="col-xs-6">
-                    <select id="windSpeed">
+                    <select id="wind_spd">
                         <option value="1">Calm</option>
                         <option value="2">Light Air</option>
                         <option value="3">Light Breeze</option>
@@ -144,7 +144,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Wind Direction</div>
                 <div class="col-xs-6">
-                    <select id="windDirection">
+                    <select id="wind_dir">
                         <option value="N">North</option>
                         <option value="NE">Northeast</option>
                         <option value="E">East </option>
@@ -159,7 +159,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stream Stage</div>
                 <div class="col-xs-6">
-                    <select id="streamStage">
+                    <select id="stage">
                         <option value="1">Dry</option>
                         <option value="2">No Flow</option>
                         <option value="3">Trace</option>
@@ -175,7 +175,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stage Qualifier</div>
                 <div class="col-xs-6">
-                    <select id="stageQualifier">
+                    <select id="stage_qual">
                         <option value="1">Stable</option>
                         <option value="2">Rising</option>
                         <option value="3">Falling</option>
@@ -187,7 +187,7 @@
                 <div class="itemLabel col-xs-6">Secchi Depth</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" min="0" id="secchiDepth" class="form-control">
+                        <input type="number" min="0" id="secchi_depth" class="form-control">
                         <span class="input-group-addon">Meters</span>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                 <div class="itemLabel col-xs-6">Air Temp.</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" id="airTemp" class="form-control">
+                        <input type="number" id="air_temp" class="form-control">
                         <span class="input-group-addon">C°</span>
                     </div>
                 </div>
@@ -204,7 +204,7 @@
                 <div class="itemLabel col-xs-6">Water Temp.</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" id="waterTemp" class="form-control">
+                        <input type="number" id="water_temp" class="form-control">
                         <span class="input-group-addon">C°</span>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="obsComment"></textarea></div>                                                                
+            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="obs_comments"></textarea></div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -417,44 +417,44 @@
                 <div class="col-xs-4 itemSubLabel">DO (Run)</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1DO" class="form-control">
+                            <input type="number" id="do_1" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_1_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
                 <div class="col-xs-4 itemSubLabel">DO (Run)</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test2DO" class="form-control">
+                            <input type="number" id="do_2" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_2_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
                 <div class="col-xs-4 itemSubLabel">pH</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1pH" class="form-control">
+                            <input type="number" id="ph_1" class="form-control">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_1_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
                 <div class="col-xs-4 itemSubLabel">pH</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test2pH" class="form-control">
+                            <input type="number" id="ph_2" class="form-control">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_2_comments"/></div>
             </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -473,22 +473,22 @@
                 <div class="col-xs-4 itemSubLabel">Nitrate</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1Nitrate" class="form-control">
+                            <input type="number" id="nitrate_1" class="form-control">
                             <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1NitrateComment"></textarea></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_1_comments"></textarea></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
                 <div class="col-xs-4 itemSubLabel">Nitrate</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1Nitrate" class="form-control">
+                            <input type="number" id="nitrate_2" class="form-control">
                             <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2NitrateComment"></textarea></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_2_comments"></textarea></div>
             </div>
             <div class="row formRow">
                     <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
@@ -499,40 +499,40 @@
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1NitriteComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_1_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
                     <div class="col-xs-4 itemSubLabel">Nitrate</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test1Nitrite" class="form-control">
+                                <input type="number" id="nitrite_2" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2NitriteComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>
                     <div class="col-xs-4 itemSubLabel">Ammonia</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test1Ammonia" class="form-control">
+                                <input type="number" id="ammonia_1" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1AmmoniaComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_1_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 2</div>
                     <div class="col-xs-4 itemSubLabel">Ammonia</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test2Ammonia" class="form-control">
+                                <input type="number" id="ammonia_2" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2AmmoniaComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_2_comments"></textarea></div>
                 </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -556,13 +556,13 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="blank1_O_P_MG" />
+                        <input class="form-control" type="number" id="op_blank" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="blank1_C"></textarea>
+                    <textarea class="itemTextarea" type="text" id="op_blank_comments"></textarea>
                 </div>
             </div>
             <div class="row formRow">
@@ -572,13 +572,13 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test1_O_P_MG" />
+                        <input class="form-control" type="number" id="op_1" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test1_C"></textarea>
+                    <textarea class="itemTextarea" type="text" id="op_1_comments"></textarea>
                 </div>
             </div>
             <div class="row formRow">
@@ -588,13 +588,13 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test2_O_P_MG" />
+                        <input class="form-control" type="number" id="op_2" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test2_C"></textarea>
+                    <textarea class="itemTextarea" type="text" id="op_2_comments"></textarea>
                 </div>
             </div>
             <div class="row formRow">
@@ -604,29 +604,29 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="blank2_C_MG" />
+                        <input class="form-control" type="number" id="chloride_blank" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="blank2_C"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_blank"></textarea>
                 </div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Blank</div>
+                <div class="itemLabel col-xs-12">Test 1</div>
                 <div class="itemSubLabel col-xs-5">
                     <p>Chloride</p>
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test1_C_MG" />
+                        <input class="form-control" type="number" id="chloride_1" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test1_Chl"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_1_comments"></textarea>
                 </div>
             </div>
             <div class="row formRow">
@@ -636,13 +636,13 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test2_C_MG" />
+                        <input class="form-control" type="number" id="chloride_2" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test2_Chl"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_2_comments"></textarea>
                 </div>
             </div>
             <div class="row btnRow">
@@ -661,25 +661,25 @@
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Name</div>
                     <div class="col-xs-6">
-                        <input type="text" class="itemTextbox"  id="volunteerName_0"/>
+                        <input type="text" class="itemTextbox"  id="volunteer_row"/>
                     </div>
                 </div>
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Date</div>
                     <div class="col-xs-6">
-                        <input type="date" class="itemTextbox " id="volunteerDate_0"/>
+                        <input type="date" class="itemTextbox " id="date_row"/>
                     </div>
                 </div>
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Activity</div>
                     <div class="col-xs-6">
-                        <input type="text" class="itemTextbox"  id="volunteerActivity_0"/>
+                        <input type="text" class="itemTextbox"  id="activity_row"/>
                     </div>
                 </div>
                 <div class="row volunteerRow volunteerRowBottom">
                     <div class="itemLabel col-xs-6">Hours</div>
                     <div class="col-xs-6">
-                        <input type="number" class="itemTextbox" id="volunteerHour_0"/>
+                        <input type="number" class="itemTextbox" id="hours_row"/>
                     </div>
                 </div>
             </div>

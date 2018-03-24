@@ -15,8 +15,13 @@ var pages = ["home", "newLogStart", "siteConditons", "observations", "bacteria",
 // This holds any other pages that are not in the main app (like modals, help menus, etc)
 var otherPages = [];
 
+
+
+
 $( document ).ready(function() {
     
+
+
     // By Logan Wilson
     var d = new Date();
     var day = d.getDate();
@@ -88,6 +93,7 @@ $( document ).ready(function() {
 // screenToShow: string of next screen in pages array
 // defaults to home page
 function switchScreen(screenToShow) {
+    closeNav();
     if (screenToShow.length === 0) {
         screenToShow = "home";
     } 
@@ -100,4 +106,14 @@ function switchScreen(screenToShow) {
             $("#" + page).hide();
         }
     });
+}
+
+
+// Side Navigation - Jake Mager
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }

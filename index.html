@@ -49,12 +49,13 @@
                 <div class="col-md-12 "><img class="center-block img-responsive" src='assets/logo.png' /></div>
             </div>
             <div class="row btnRow">
-                <div class="col-md-12 "><button class="center-block homeButton btn" id="newLogBtn">New Log</button> </div>
+                <div class="col-md-12"><button class="center-block homeButton btn" id="newLogBtn">New Log</button> </div>
             </div>
         </div>
         <!-- PAGE 1: Start of New Log -->
         <!-- Created by Charlese Heckel / Logan Wilson 3/3/2018 -->
         <div id="newLogStart" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()"><p onclick="openNav()">&#9776;</p></span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">New Log</p></div>
             </div>
@@ -106,6 +107,7 @@
         <!-- PAGE 2: Site Conditions-->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
         <div id="siteConditons" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Site Conditions</p></div>
             </div>
@@ -218,6 +220,7 @@
         <!-- PAGE 3: Observations-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <div id="observations" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Observations</p></div>
             </div>
@@ -341,6 +344,7 @@
         <!-- PAGE 4: Bacteria-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <div id="bacteria" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Bacteria Data</p></div>
             </div>
@@ -409,6 +413,7 @@
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
         <!-- Last edit by Jake Mager 3/24/2018 -->
         <div id="doAndph" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">DO & pH</p></div>
             </div>
@@ -465,6 +470,7 @@
         <!-- PAGE 6: Nitrogen -->
         <!-- Created by Jake Mager 3/24/2018 -->
         <div id="nitrogen" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Nitrogen</p></div>
             </div>
@@ -546,6 +552,7 @@
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <!-- Updated by Dustin Haxton 3/24/2018 -->
         <div id="phosphorus" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Phosphorus and Chloride</p></div>
             </div>
@@ -654,6 +661,7 @@
         <!-- PAGE 8: Volunteers -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
         <div id="volunteers" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div id="volunteerHolder">
                 <div class="row title">
                     <div class="col-md-12"><p class="text-center">Volunteers</p></div>
@@ -701,5 +709,22 @@
             <input type='hidden' value='0' id='volunteerCount' />
         </div>
         </div>
+
+
+
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p>Navigation:</p>
+            <a onclick="switchScreen('newLogStart')">Intital</a>
+            <a onclick="switchScreen('siteConditons')">Site Conditons</a>
+            <a onclick="switchScreen('observations')">Observations</a>
+            <a onclick="switchScreen('bacteria')">Bacteria</a>
+            <a onclick="switchScreen('doAndph')">Do & pH</a>
+            <a onclick="switchScreen('nitrogen')">Nitrogen</a>
+            <a onclick="switchScreen('phosphorus')">Phosphorus</a>
+            <a onclick="switchScreen('volunteers')">Volunteers</a>
+        </div>
+              
     </body>
 </html>

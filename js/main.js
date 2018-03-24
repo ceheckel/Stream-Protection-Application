@@ -24,10 +24,10 @@ $( document ).ready(function() {
     });
 
     // Forward navigation buttons listner
-    // this gets the id of the current page which is the 3rd parent of the button
+    // this gets the id of the only visilbe class with the name page
     // then increments the index of whereever that id is in the pages array
     $('.navForwardBtn').on('click touch', function() {
-        var page = $(this).parent().parent().parent().get(0).id;
+        var page = $( ".page:visible" ).get(0).id;
         var index = pages.indexOf(page) + 1;
         switchScreen(pages[index]);
     });

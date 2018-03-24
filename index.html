@@ -38,7 +38,7 @@
         <div id="main">
         <!-- PAGE 1: HOME -->
         <!-- Created by Jake Mager -->
-        <div id="home" class="container col-md-offset-3 col-md-6">
+        <div id="home" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Blue Thumb Datasheet</p></div>
             </div>
@@ -51,7 +51,7 @@
         </div>
         <!-- PAGE 1: Start of New Log -->
         <!-- Created by Charlese Heckel / Logan Wilson 3/3/2018 -->
-        <div id="newLogStart" class="container col-md-offset-3 col-md-6">
+        <div id="newLogStart" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">New Log</p></div>
             </div>
@@ -102,7 +102,7 @@
 
         <!-- PAGE 2: Site Conditions-->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="siteConditons" class="container col-md-offset-3 col-md-6">     
+        <div id="siteConditons" class="container page col-md-offset-3 col-md-6">     
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Site Conditions</p></div>
             </div>
@@ -214,7 +214,7 @@
 
         <!-- PAGE 3: Observations-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
-        <div id="observations" class="container col-md-offset-3 col-md-6">
+        <div id="observations" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Observations</p></div>
             </div>
@@ -340,7 +340,7 @@
 
         <!-- PAGE 4: Bacteria-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
-        <div id="bacteria" class="container col-md-offset-3 col-md-6">
+        <div id="bacteria" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Bacteria Data</p></div>
             </div>
@@ -378,29 +378,54 @@
 
         <!-- PAGE 5: DO & pH -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="doAndph" class="container col-md-offset-3 col-md-6">     
+        <!-- Last edit by Jake Mager 3/24/2018 -->
+        <div id="doAndph" class="container page col-md-offset-3 col-md-6">     
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">DO & pH</p></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 1</div>
-                <div class="col-xs-12"><p>DO (Run) <input type="number" id="test1DO"/> mg/L DO</p></div>
-                <div class="col-xs-12"><p>Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></p></div>                                                                                                     
+                <div class="col-xs-4 itemSubLabel">DO (Run)</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test1DO" class="form-control">
+                            <span class="input-group-addon">mg/L DO</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></div>                                                                                                     
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
-                <div class="col-xs-12"><p>DO (Run) <input type="number" id="test2DO"/> mg/L DO</p></div>
-                <div class="col-xs-12"><p>Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></p></div>                                                                
+                <div class="col-xs-4 itemSubLabel">DO (Run)</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test2DO" class="form-control">
+                            <span class="input-group-addon">mg/L DO</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></div>                                                                
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
-                <div class="col-xs-12"><p>pH <input type="number" id="test1pH"/> SU</p></div>
-                <div class="col-xs-12"><p>Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></p></div>                                                
+                <div class="col-xs-4 itemSubLabel">pH</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test1pH" class="form-control">
+                            <span class="input-group-addon">SU</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></div>                                                
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
-                <div class="col-xs-12"><p>pH<input type="number" id="test2pH"/> SU</p></div>
-                <div class="col-xs-12"><p>Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></p></div>                                                    
+                <div class="col-xs-4 itemSubLabel">pH</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test2pH" class="form-control">
+                            <span class="input-group-addon">SU</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></div>                                                      
             </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -409,86 +434,88 @@
         </div>
 
         <!-- PAGE 6: Nitrogen -->
-        <!-- Created by Charlese Heckel / Logan Wilson 3/3/2018 -->
-        <div id="nitrogen" class="container col-md-offset-3 col-md-6">
+        <!-- Created by Jake Mager 3/24/2018 -->
+        <div id="nitrogen" class="container page col-md-offset-3 col-md-6">     
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Nitrogen</p></div>
             </div>
             <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 1</div>
+                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 1</div>
+                <div class="col-xs-4 itemSubLabel">Nitrate</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test1Nitrate" class="form-control">
+                            <span class="input-group-addon">mg/L N</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1NitrateComment"/></div>                                                                                                     
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Nitrate Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1Nitrate" /></div>
+                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
+                <div class="col-xs-4 itemSubLabel">Nitrate</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                            <input type="number" id="test1Nitrate" class="form-control">
+                            <span class="input-group-addon">mg/L N</span>
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2NitrateComment"/></div>                                                                
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1NitrateComments"/></div>
-            </div>
-            <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 2</div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Nitrate Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2Nitrate" /></div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2NitrateComments"/></div>
-            </div>
-            <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 1</div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Nitrite Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1Nitrite" /></div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1NitriteComments"/></div>
-            </div>
-            <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 2</div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Nitrite Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2Nitrite" /></div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2NitriteComments"/></div>
-            </div>
-            <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 1</div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Ammonia Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1Ammonia" /></div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t1AmmoniaComments"/></div>
-            </div>
-            <div class="row formRow">
-            	<div class="itemLabel col-xs-6">Test 2</div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Ammonia Nitogen</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2Ammonia" /></div>
-            </div>
-            <div class="row formRow">
-                <div class="itemLabel col-xs-6">Comments</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="t2AmmoniaComments"/></div>
-            </div>
+                    <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
+                    <div class="col-xs-4 itemSubLabel">Nitrite</div>
+                    <div class="col-xs-8">
+                        <div class="itemTextbox input-group">
+                                <input type="number" id="test1Nitrite" class="form-control">
+                                <span class="input-group-addon">mg/L N</span>
+                        </div>
+                    </div>
+                    <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1NitriteComment"/></div>                                                                                                     
+                </div>
+                <div class="row formRow">
+                    <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
+                    <div class="col-xs-4 itemSubLabel">Nitrate</div>
+                    <div class="col-xs-8">
+                        <div class="itemTextbox input-group">
+                                <input type="number" id="test1Nitrite" class="form-control">
+                                <span class="input-group-addon">mg/L N</span>
+                        </div>
+                    </div>
+                    <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2NitriteComment"/></div>                                                                
+                </div>
+                <div class="row formRow">
+                    <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>
+                    <div class="col-xs-4 itemSubLabel">Ammonia</div>
+                    <div class="col-xs-8">
+                        <div class="itemTextbox input-group">
+                                <input type="number" id="test1Ammonia" class="form-control">
+                                <span class="input-group-addon">mg/L N</span>
+                        </div>
+                    </div>
+                    <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1AmmoniaComment"/></div>                                                                
+                </div>
+                <div class="row formRow">
+                    <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 2</div>
+                    <div class="col-xs-4 itemSubLabel">Ammonia</div>
+                    <div class="col-xs-8">
+                        <div class="itemTextbox input-group">
+                                <input type="number" id="test2Ammonia" class="form-control">
+                                <span class="input-group-addon">mg/L N</span>
+                        </div>
+                    </div>
+                    <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2AmmoniaComment"/></div>                                                                
+                </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
             </div>
         </div>
 
+    
+
         <!-- PAGE 7: Phosphorus-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
-        <div id="phosphorus" class="container col-md-offset-3 col-md-6">
+        <div id="phosphorus" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Phosphorus and Chloride</p></div>
             </div>
@@ -542,7 +569,7 @@
 
         <!-- PAGE 8: Volunteers -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="volunteers" class="container col-md-offset-3 col-md-6">  
+        <div id="volunteers" class="container page col-md-offset-3 col-md-6">  
             <div id="volunteerHolder">
                 <div class="row title">
                     <div class="col-md-12"><p class="text-center">Volunteers</p></div>
@@ -572,10 +599,10 @@
                     </div>
                 </div>
             </div>   
-            <div class="row volunteerBtnContainer">
+            <div class="row volunteerBtncontainer page">
                 <div class="col-md-12 text-center"><button class='btn' id="addVolunteer">Add Volunteer</button></div>
             </div>
-            <div class="row volunteerBtnContainer">
+            <div class="row volunteerBtncontainer page">
                     <div class="col-md-12 text-center"><button class='btn' id="removeVolunteer">Remove Last Volunteer</button></div>
             </div>
             <div class="row btnRow">

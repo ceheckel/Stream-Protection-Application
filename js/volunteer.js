@@ -28,25 +28,25 @@ $( document ).ready(function() {
             "<div class='row volunteerRow'>" +
                 "<div class='itemLabel col-xs-6'>Name</div>" +
                 "<div class='col-xs-6'>" +
-                    "<input type='text' id='volunteerName_" + volunteerCount + "'/>" +
+                    "<input class='itemTextbox' type='text' id='volunteerName_" + volunteerCount + "'/>" +
                 "</div>" +
             "</div>" +
             "<div class='row volunteerRow'>" +
                 "<div class='itemLabel col-xs-6'>Date</div>" +
                 "<div class='col-xs-6'>" +
-                    "<input type='date' id='volunteerDate_" + volunteerCount + "' value='" + $("#volunteerDate_0").val() + "'/>" +
+                    "<input class='itemTextbox' type='date' id='volunteerDate_" + volunteerCount + "' value='" + $("#volunteerDate_0").val() + "'/>" +
                 "</div>" +
             "</div>" +
             "<div class='row volunteerRow'>" +
                 "<div class='itemLabel col-xs-6'>Activity</div>" +
                 "<div class='col-xs-6'>" +
-                    "<input type='text' id='volunteerActivity_" + volunteerCount + "'/>" +
+                    "<input class='itemTextbox' type='text' id='volunteerActivity_" + volunteerCount + "'/>" +
                 "</div>" +
             "</div>" +
             "<div class='row volunteerRow volunteerRowBottom'>" +
                 "<div class='itemLabel col-xs-6'>Hours</div>" +
                 "<div class='col-xs-6'>" +
-                    "<input type='number' id='volunteerHour_" + volunteerCount + "'/>" +
+                    "<input class='itemTextbox' type='number' id='volunteerHour_" + volunteerCount + "'/>" +
                 "</div>" +
             "</div>" +
         "</div>";

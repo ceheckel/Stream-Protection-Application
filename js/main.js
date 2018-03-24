@@ -17,6 +17,7 @@ var otherPages = [];
 
 $( document ).ready(function() {
     
+    // By Logan Wilson
     var d = new Date();
     var day = d.getDate();
     var month = d.getMonth() + 1;
@@ -69,6 +70,8 @@ $( document ).ready(function() {
         switchScreen(pages[index]);
     });
     
+
+    // By Logan Wilson
     $('#sendEmail').on('click touch', function() {
         var csv = "hello world";
         $.ajax({

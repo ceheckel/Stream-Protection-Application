@@ -3,19 +3,19 @@
     <head>
         <title>Blue Thumb Data Sheet</title>
         <!--
-            BLUE THUMB OKALAHOMA DATA STREET 
+            BLUE THUMB OKALAHOMA DATA STREET
             Created by the BluThumb Team at Michigan Tech
 
-            Authors: 
+            Authors:
                     Brady Osahl
                     Charles Heckel
                     Dustin Haxon
                     Jake Mager
                     Logan Wilson
                     Zac Paris
-            
-            Start Date: 03/04/2018 
-        
+
+            Start Date: 03/04/2018
+
             -->
 
         <!-- TODO: MAKE JS AND BOOTSTRAP LOCAL (FOR OFFLINE PURPOSES) -->
@@ -26,12 +26,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
+
         <!-- Import JS for pages -->
         <script src="js/volunteer.js"></script>
         <script src="js/main.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        
+        <!-- Google Location -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZsPvH-k1xQ_iWbuzTmVTw5cZ_nXgyZg&sensor=false"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -98,11 +101,11 @@
             <div class="row btnRow">
                 <div class="col-md-12 "><button class="center-block btn navForwardBtn">Next</button> </div>
             </div>
-        </div> 
+        </div>
 
         <!-- PAGE 2: Site Conditions-->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="siteConditons" class="container page col-md-offset-3 col-md-6">     
+        <div id="siteConditons" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Site Conditions</p></div>
             </div>
@@ -135,7 +138,7 @@
                         <option value="7">Large branches Sway</option>
                         <option value="8">Hard to Walk</option>
                         <option value="9">Other (High Wind)</option>
-                    </select>                
+                    </select>
                 </div>
             </div>
             <div class="row formRow">
@@ -150,7 +153,7 @@
                         <option value="SW">Southwest</option>
                         <option value="W">West</option>
                         <option value="NW">Northwest</option>
-                    </select> 
+                    </select>
                 </div>
             </div>
             <div class="row formRow">
@@ -205,7 +208,7 @@
                         <span class="input-group-addon">C°</span>
                     </div>
                 </div>
-            </div>       
+            </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -405,7 +408,7 @@
         <!-- PAGE 5: DO & pH -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
         <!-- Last edit by Jake Mager 3/24/2018 -->
-        <div id="doAndph" class="container page col-md-offset-3 col-md-6">     
+        <div id="doAndph" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">DO & pH</p></div>
             </div>
@@ -418,7 +421,7 @@
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></div>                                                                                                     
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
@@ -429,7 +432,7 @@
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
@@ -440,7 +443,7 @@
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></div>                                                
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
@@ -451,7 +454,7 @@
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></div>                                                      
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></div>
             </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -461,7 +464,7 @@
 
         <!-- PAGE 6: Nitrogen -->
         <!-- Created by Jake Mager 3/24/2018 -->
-        <div id="nitrogen" class="container page col-md-offset-3 col-md-6">     
+        <div id="nitrogen" class="container page col-md-offset-3 col-md-6">
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Nitrogen</p></div>
             </div>
@@ -537,7 +540,7 @@
             </div>
         </div>
 
-    
+
 
         <!-- PAGE 7: Phosphorus-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
@@ -560,7 +563,7 @@
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="blank1_C"></textarea>
-                </div>        
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 1</div>
@@ -576,7 +579,7 @@
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="test1_C"></textarea>
-                </div> 
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 2</div>
@@ -592,7 +595,7 @@
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="test2_C"></textarea>
-                </div> 
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Blank</div>
@@ -650,7 +653,7 @@
 
         <!-- PAGE 8: Volunteers -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="volunteers" class="container page col-md-offset-3 col-md-6">  
+        <div id="volunteers" class="container page col-md-offset-3 col-md-6">
             <div id="volunteerHolder">
                 <div class="row title">
                     <div class="col-md-12"><p class="text-center">Volunteers</p></div>
@@ -679,12 +682,15 @@
                         <input type="number" class="itemTextbox" id="volunteerHour_0"/>
                     </div>
                 </div>
-            </div>   
+            </div>
             <div class="row volunteerBtncontainer page">
                 <div class="col-md-12 text-center"><button class='btn' id="addVolunteer">Add Volunteer</button></div>
             </div>
             <div class="row volunteerBtncontainer page">
                     <div class="col-md-12 text-center"><button class='btn' id="removeVolunteer">Remove Last Volunteer</button></div>
+            </div>
+            <div class="row btnRow">
+                    <div class="col-md-12 "><button id="sendEmail" class="center-block btn">Submit</button> </div>
             </div>
             <div class="row btnRow">
                     <div class="col-md-12 "><button class="center-block btn navBackBtn">Back</button> </div>

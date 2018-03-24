@@ -1,7 +1,7 @@
 /*
   main.js
   by Jake Mager 3/5/2018
-  
+
   * Holds event listners for buttons
   * Dynamically navigate through pages
 */
@@ -19,9 +19,6 @@ var otherPages = [];
 
 
 $( document ).ready(function() {
-    
-
-
     // By Logan Wilson
     var d = new Date();
     var day = d.getDate();
@@ -41,8 +38,8 @@ $( document ).ready(function() {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
         console.log("lat: ", lat, " long: ",long);
-        document.getElementById('lat').value = lat;
-        document.getElementById('long').value = long;
+        document.getElementById('latitude').value = lat;
+        document.getElementById('longitude').value = long;
     });
 
 /*    var csv = "hello world";
@@ -74,7 +71,7 @@ $( document ).ready(function() {
         var index = pages.indexOf(page) - 1;
         switchScreen(pages[index]);
     });
-    
+
 
     // By Logan Wilson
     $('#sendEmail').on('click touch', function() {
@@ -96,7 +93,7 @@ function switchScreen(screenToShow) {
     closeNav();
     if (screenToShow.length === 0) {
         screenToShow = "home";
-    } 
+    }
 
     // loop through pages, hiding everything but screenToShow
     $.each(pages, function (index, page) {

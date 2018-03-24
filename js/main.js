@@ -36,8 +36,8 @@ $( document ).ready(function() {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
         console.log("lat: ", lat, " long: ",long);
-        document.getElementById('lat').value = lat;
-        document.getElementById('long').value = long;
+        document.getElementById('latitude').value = lat;
+        document.getElementById('longitude').value = long;
     });
 
 /*    var csv = "hello world";

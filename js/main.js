@@ -32,7 +32,7 @@ $( document ).ready(function() {
     var minutes = d.getMinutes();
     if (hours < 10) hours = "0" + hours;
     if (minutes < 10) minutes = "0" + minutes;
-    document.getElementById('time').value = hours+":"+minutes;
+    document.getElementById('site_time').value = hours+":"+minutes;
 
     navigator.geolocation.getCurrentPosition(function(position) {
         var lat = position.coords.latitude;

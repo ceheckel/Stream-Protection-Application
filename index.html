@@ -3,19 +3,19 @@
     <head>
         <title>Blue Thumb Data Sheet</title>
         <!--
-            BLUE THUMB OKALAHOMA DATA STREET 
+            BLUE THUMB OKALAHOMA DATA STREET
             Created by the BluThumb Team at Michigan Tech
 
-            Authors: 
+            Authors:
                     Brady Osahl
                     Charles Heckel
                     Dustin Haxon
                     Jake Mager
                     Logan Wilson
                     Zac Paris
-            
-            Start Date: 03/04/2018 
-        
+
+            Start Date: 03/04/2018
+
             -->
 
         <!-- TODO: MAKE JS AND BOOTSTRAP LOCAL (FOR OFFLINE PURPOSES) -->
@@ -26,12 +26,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
+
         <!-- Import JS for pages -->
         <script src="js/volunteer.js"></script>
         <script src="js/main.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        
+        <!-- Google Location -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZsPvH-k1xQ_iWbuzTmVTw5cZ_nXgyZg&sensor=false"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -46,22 +49,23 @@
                 <div class="col-md-12 "><img class="center-block img-responsive" src='assets/logo.png' /></div>
             </div>
             <div class="row btnRow">
-                <div class="col-md-12 "><button class="center-block homeButton btn" id="newLogBtn">New Log</button> </div>
+                <div class="col-md-12"><button class="center-block homeButton btn" id="newLogBtn">New Log</button> </div>
             </div>
         </div>
         <!-- PAGE 1: Start of New Log -->
         <!-- Created by Charlese Heckel / Logan Wilson 3/3/2018 -->
         <div id="newLogStart" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()"><p onclick="openNav()">&#9776;</p></span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">New Log</p></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Site Name</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="siteName" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="site_name" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">WBID Number</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="wbidNumber" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="wbid" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Legal</div>
@@ -77,32 +81,33 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Lat</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="lat" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="number" id="latitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Long</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="long" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="number" id="longitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Time</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="time" id="time" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="time" id="site_time" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Sampler 1</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler1" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler_1" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Sampler 2</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler2" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="text" id="sampler_2" /></div>
             </div>
             <div class="row btnRow">
                 <div class="col-md-12 "><button class="center-block btn navForwardBtn">Next</button> </div>
             </div>
-        </div> 
+        </div>
 
         <!-- PAGE 2: Site Conditions-->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="siteConditons" class="container page col-md-offset-3 col-md-6">     
+        <div id="siteConditons" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Site Conditions</p></div>
             </div>
@@ -125,7 +130,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Wind Speed</div>
                 <div class="col-xs-6">
-                    <select id="windSpeed">
+                    <select id="wind_spd">
                         <option value="1">Calm</option>
                         <option value="2">Light Air</option>
                         <option value="3">Light Breeze</option>
@@ -135,13 +140,13 @@
                         <option value="7">Large branches Sway</option>
                         <option value="8">Hard to Walk</option>
                         <option value="9">Other (High Wind)</option>
-                    </select>                
+                    </select>
                 </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Wind Direction</div>
                 <div class="col-xs-6">
-                    <select id="windDirection">
+                    <select id="wind_dir">
                         <option value="N">North</option>
                         <option value="NE">Northeast</option>
                         <option value="E">East </option>
@@ -150,13 +155,13 @@
                         <option value="SW">Southwest</option>
                         <option value="W">West</option>
                         <option value="NW">Northwest</option>
-                    </select> 
+                    </select>
                 </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stream Stage</div>
                 <div class="col-xs-6">
-                    <select id="streamStage">
+                    <select id="stage">
                         <option value="1">Dry</option>
                         <option value="2">No Flow</option>
                         <option value="3">Trace</option>
@@ -172,7 +177,7 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Stage Qualifier</div>
                 <div class="col-xs-6">
-                    <select id="stageQualifier">
+                    <select id="stage_qual">
                         <option value="1">Stable</option>
                         <option value="2">Rising</option>
                         <option value="3">Falling</option>
@@ -184,7 +189,7 @@
                 <div class="itemLabel col-xs-6">Secchi Depth</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" min="0" id="secchiDepth" class="form-control">
+                        <input type="number" min="0" id="secchi_depth" class="form-control">
                         <span class="input-group-addon">Meters</span>
                     </div>
                 </div>
@@ -193,7 +198,7 @@
                 <div class="itemLabel col-xs-6">Air Temp.</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" id="airTemp" class="form-control">
+                        <input type="number" id="air_temp" class="form-control">
                         <span class="input-group-addon">C°</span>
                     </div>
                 </div>
@@ -201,11 +206,11 @@
                 <div class="itemLabel col-xs-6">Water Temp.</div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
-                        <input type="number" id="waterTemp" class="form-control">
+                        <input type="number" id="water_temp" class="form-control">
                         <span class="input-group-addon">C°</span>
                     </div>
                 </div>
-            </div>       
+            </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -215,123 +220,121 @@
         <!-- PAGE 3: Observations-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <div id="observations" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Observations</p></div>
             </div>
             <!-- Checkbox "values" NEED to be changed when data is being pulled -->
             <!-- The id's NEED to be changed -->
-            <div class="form-check formRow ">
-                <label class="form-check formRow-label" for="defaultCheck1">Clean
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck1">
+            <div class="row form-check formRow ">
+                <label class="form-check itemSubLabel" for="clean">Clean
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="clean">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck2">Manure in Stream
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck2">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="manure">Manure in Stream
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="manure">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck3">Unsightly Color Appearance
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck3">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="unsightly">Unsightly Color Appearance
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="unsightly">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck4">Foam/Scum
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck4">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="foam">Foam/Scum
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="foam">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck5">Floating Detritus
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck5">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="detritus">Floating Detritus
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="detritus">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck6">Trash
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck6">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="trash">Trash
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="trash">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck7">Significant Algae
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck7">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="sig_algae">Significant Algae
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="sig_algae">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck8">Fish Kill
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck8">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="fish_kill">Fish Kill
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="fish_kill">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck9">Dead Animal(s) in Stream
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck9">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="dead_animals">Dead Animal(s) in Stream
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="dead_animals">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck10">Iron Precipitates
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck10">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="iron_precip">Iron Precipitates
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="iron_precip">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck11">Siltation
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck11">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="siltation">Siltation
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="siltation">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck12">Flow Alteration
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck12">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="flow_alter">Flow Alteration
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="flow_alter">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck13">Habitat Alteration
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck13">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="habitat_alter">Habitat Alteration
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="habitat_alter">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck14">Oily Film/Grease
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck14">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="oil_film">Oily Film/Grease
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="oil_film">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck15">Offensive Odor
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck15">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="odor">Offensive Odor
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="odor">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck16">Exotic SPP
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck16">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="exotic_spp">Exotic SPP
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="exotic_spp">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow">
-                <label class="form-check formRow-label" for="defaultCheck17">Recent Cattle Activity in Stream
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck17">
+            <div class="row form-check formRow">
+                <label class="form-check itemSubLabel" for="cattle">Recent Cattle Activity in Stream
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="cattle">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-check formRow ">
-                <label class="form-check formRow-label" for="defaultCheck18">Other - Please Comment
-                    <input class="form-check formRow-input" type="checkbox" value="" id="defaultCheck18">
+            <div class="row form-check formRow ">
+                <label class="form-check itemSubLabel" for="other_obs">Other - Please Comment
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="other_obs">
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="form-group formRow">
-                <label for="exampleFormControlTextarea1">Comments</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="obs_comments"></textarea></div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -341,33 +344,63 @@
         <!-- PAGE 4: Bacteria-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <div id="bacteria" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Bacteria Data</p></div>
             </div>
             <div class="row formRow">
-                <div class="col-xs-6">Sample Volume (mL)</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
+                <div class="itemSubLabel col-xs-6">Sample Volume</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                        <span class="input-group-addon">mL</span>
+                    </div>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Dish 1</div>
-                <div class="col-xs-6">E.coli Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
-                <div class="col-xs-6">Pink and Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
+                <div class="itemSubLabel col-xs-6">E.coli Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-6">Pink and Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Dish 2</div>
-                <div class="col-xs-6">E.coli Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
-                <div class="col-xs-6">Pink and Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
+                <div class="itemSubLabel col-xs-6">E.coli Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-6">Pink and Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Dish 3</div>
-                <div class="col-xs-6">E.coli Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
-                <div class="col-xs-6">Pink and Violet Count</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="numeric" id="weather" /></div>
+                <div class="itemSubLabel col-xs-6">E.coli Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
+                <div class="itemSubLabel col-xs-6">Pink and Violet Count</div>
+                <div class="col-xs-6">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="test123" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -379,7 +412,8 @@
         <!-- PAGE 5: DO & pH -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
         <!-- Last edit by Jake Mager 3/24/2018 -->
-        <div id="doAndph" class="container page col-md-offset-3 col-md-6">     
+        <div id="doAndph" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">DO & pH</p></div>
             </div>
@@ -388,44 +422,44 @@
                 <div class="col-xs-4 itemSubLabel">DO (Run)</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1DO" class="form-control">
+                            <input type="number" id="do_1" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1DOComment"/></div>                                                                                                     
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_1_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
                 <div class="col-xs-4 itemSubLabel">DO (Run)</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test2DO" class="form-control">
+                            <input type="number" id="do_2" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2DOComment"/></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_2_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
                 <div class="col-xs-4 itemSubLabel">pH</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1pH" class="form-control">
+                            <input type="number" id="ph_1" class="form-control">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test1pHComment"/></div>                                                
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_1_comments"/></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
                 <div class="col-xs-4 itemSubLabel">pH</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test2pH" class="form-control">
+                            <input type="number" id="ph_2" class="form-control">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="test2pHComment"/></div>                                                      
+                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_2_comments"/></div>
             </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -435,7 +469,8 @@
 
         <!-- PAGE 6: Nitrogen -->
         <!-- Created by Jake Mager 3/24/2018 -->
-        <div id="nitrogen" class="container page col-md-offset-3 col-md-6">     
+        <div id="nitrogen" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Nitrogen</p></div>
             </div>
@@ -444,22 +479,22 @@
                 <div class="col-xs-4 itemSubLabel">Nitrate</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1Nitrate" class="form-control">
+                            <input type="number" id="nitrate_1" class="form-control">
                             <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1NitrateComment"></textarea></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_1_comments"></textarea></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
                 <div class="col-xs-4 itemSubLabel">Nitrate</div>
                 <div class="col-xs-8">
                     <div class="itemTextbox input-group">
-                            <input type="number" id="test1Nitrate" class="form-control">
+                            <input type="number" id="nitrate_2" class="form-control">
                             <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2NitrateComment"></textarea></div>                                                                
+                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_2_comments"></textarea></div>
             </div>
             <div class="row formRow">
                     <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
@@ -470,40 +505,40 @@
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1NitriteComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_1_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
                     <div class="col-xs-4 itemSubLabel">Nitrate</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test1Nitrite" class="form-control">
+                                <input type="number" id="nitrite_2" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2NitriteComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>
                     <div class="col-xs-4 itemSubLabel">Ammonia</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test1Ammonia" class="form-control">
+                                <input type="number" id="ammonia_1" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test1AmmoniaComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_1_comments"></textarea></div>
                 </div>
                 <div class="row formRow">
                     <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 2</div>
                     <div class="col-xs-4 itemSubLabel">Ammonia</div>
                     <div class="col-xs-8">
                         <div class="itemTextbox input-group">
-                                <input type="number" id="test2Ammonia" class="form-control">
+                                <input type="number" id="ammonia_2" class="form-control">
                                 <span class="input-group-addon">mg/L N</span>
                         </div>
                     </div>
-                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="test2AmmoniaComment"></textarea></div>                                                                
+                    <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_2_comments"></textarea></div>
                 </div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -511,17 +546,16 @@
             </div>
         </div>
 
-    
+
 
         <!-- PAGE 7: Phosphorus-->
         <!-- Created by Brady Osahl / Zac Paris 3/3/2018 -->
         <!-- Updated by Dustin Haxton 3/24/2018 -->
         <div id="phosphorus" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div class="row title">
                 <div class="col-md-12"><p class="text-center">Phosphorus and Chloride</p></div>
             </div>
-
-            <!-- Blank Orthophosphate Phosphorus -->
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Blank</div>
                 <div class="itemSubLabel col-xs-5">
@@ -529,17 +563,15 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="blank1_O_P_MG" />
+                        <input class="form-control" type="number" id="op_blank" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="blank1_C"></textarea>
-                </div>        
+                    <textarea class="itemTextarea" type="text" id="op_blank_comments"></textarea>
+                </div>
             </div>
-
-            <!-- Test 1 Orthophosphate Phosphorus -->
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 1</div>
                 <div class="itemSubLabel col-xs-5">
@@ -547,17 +579,15 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test1_O_P_MG" />
+                        <input class="form-control" type="number" id="op_1" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test1_C"></textarea>
-                </div> 
+                    <textarea class="itemTextarea" type="text" id="op_1_comments"></textarea>
+                </div>
             </div>
-
-            <!-- Test 2 Orthophosphate Phosphorus -->
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 2</div>
                 <div class="itemSubLabel col-xs-5">
@@ -565,17 +595,15 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test2_O_P_MG" />
+                        <input class="form-control" type="number" id="op_2" />
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test2_C"></textarea>
-                </div> 
+                    <textarea class="itemTextarea" type="text" id="op_2_comments"></textarea>
+                </div>
             </div>
-
-            <!-- Blank chloride -->
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Blank</div>
                 <div class="itemSubLabel col-xs-5">
@@ -583,49 +611,45 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="blank2_C_MG" />
+                        <input class="form-control" type="number" id="chloride_blank" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="blank2_C"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_blank"></textarea>
                 </div>
             </div>
-
-            <!-- Test 1 chloride -->
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Blank</div>
+                <div class="itemLabel col-xs-12">Test 1</div>
                 <div class="itemSubLabel col-xs-5">
                     <p>Chloride</p>
                 </div>
                 <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test1_C_MG" />
+                        <input class="form-control" type="number" id="chloride_1" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test1_Chl"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_1_comments"></textarea>
                 </div>
             </div>
-
-            <!-- Test 2 chloride -->
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 2</div>
-                <div class="itemSubLabel col-xs-6">
+                <div class="itemSubLabel col-xs-5">
                     <p>Chloride</p>
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-7">
                     <div class="itemTextbox input-group">
-                        <input class="form-control" type="number" id="test2_C_MG" />
+                        <input class="form-control" type="number" id="chloride_2" />
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="test2_Chl"></textarea>
+                    <textarea class="itemTextarea" type="text" id="chloride_2_comments"></textarea>
                 </div>
             </div>
             <div class="row btnRow">
@@ -636,7 +660,8 @@
 
         <!-- PAGE 8: Volunteers -->
         <!-- Created by Jake Mager / Dustin Haxton 3/3/2018 -->
-        <div id="volunteers" class="container page col-md-offset-3 col-md-6">  
+        <div id="volunteers" class="container page col-md-offset-3 col-md-6">
+            <span class="hamburgerButton" onclick="openNav()">&#9776;</span>
             <div id="volunteerHolder">
                 <div class="row title">
                     <div class="col-md-12"><p class="text-center">Volunteers</p></div>
@@ -644,33 +669,36 @@
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Name</div>
                     <div class="col-xs-6">
-                        <input type="text" class="itemTextbox"  id="volunteerName_0"/>
+                        <input type="text" class="itemTextbox"  id="volunteer_name_0"/>
                     </div>
                 </div>
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Date</div>
                     <div class="col-xs-6">
-                        <input type="date" class="itemTextbox " id="volunteerDate_0"/>
+                        <input type="date" class="itemTextbox " id="volunteer_date_0"/>
                     </div>
                 </div>
                 <div class="row volunteerRow">
                     <div class="itemLabel col-xs-6">Activity</div>
                     <div class="col-xs-6">
-                        <input type="text" class="itemTextbox"  id="volunteerActivity_0"/>
+                        <input type="text" class="itemTextbox"  id="volunteer_activity_0"/>
                     </div>
                 </div>
                 <div class="row volunteerRow volunteerRowBottom">
                     <div class="itemLabel col-xs-6">Hours</div>
                     <div class="col-xs-6">
-                        <input type="number" class="itemTextbox" id="volunteerHour_0"/>
+                        <input type="number" class="itemTextbox" id="volunteer_hours_0"/>
                     </div>
                 </div>
-            </div>   
+            </div>
             <div class="row volunteerBtncontainer page">
                 <div class="col-md-12 text-center"><button class='btn' id="addVolunteer">Add Volunteer</button></div>
             </div>
             <div class="row volunteerBtncontainer page">
                     <div class="col-md-12 text-center"><button class='btn' id="removeVolunteer">Remove Last Volunteer</button></div>
+            </div>
+            <div class="row btnRow">
+                    <div class="col-md-12 "><button id="sendEmail" class="center-block btn">Submit</button> </div>
             </div>
             <div class="row btnRow">
                     <div class="col-md-12 "><button class="center-block btn navBackBtn">Back</button> </div>
@@ -681,5 +709,22 @@
             <input type='hidden' value='0' id='volunteerCount' />
         </div>
         </div>
+
+
+
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p>Navigation:</p>
+            <a onclick="switchScreen('newLogStart')">Intital</a>
+            <a onclick="switchScreen('siteConditons')">Site Conditons</a>
+            <a onclick="switchScreen('observations')">Observations</a>
+            <a onclick="switchScreen('bacteria')">Bacteria</a>
+            <a onclick="switchScreen('doAndph')">Do & pH</a>
+            <a onclick="switchScreen('nitrogen')">Nitrogen</a>
+            <a onclick="switchScreen('phosphorus')">Phosphorus</a>
+            <a onclick="switchScreen('volunteers')">Volunteers</a>
+        </div>
+              
     </body>
 </html>

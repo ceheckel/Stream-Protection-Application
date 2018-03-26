@@ -157,7 +157,8 @@ $( document ).ready(function() {
 
         /* Bacteria Data */
         // TODO: We should contact Blue Thumb about this... its not in the CSV.
-        /* */
+
+        /* Nitrogen Page */
         var do_1 = $("#do_1").val();
         var do_1_comments = $("#do_1_comments").val();
         var do_2 = $("#do_2").val();
@@ -169,17 +170,19 @@ $( document ).ready(function() {
         var nitrate_1 = $("#nitrate_1").val();
         var nitrate_1_comments = $("#nitrate_1_comments").val();
         var nitrate_2 = $("#nitrate_2").val();
-        var nitrate_2_comments = $("nitrate_2_comments").val();
+        var nitrate_2_comments = $("#nitrate_2_comments").val();
         var nitrite_1 = $("#nitrite_1").val();
-        var nitrite_1_comments = $("#nitrite_1_comments");
-        var nitrite_2 = $("#nitrite_2");
-        var nitrite_2_comments = $("#nitrite_2_comments");
-        // var ammonia_blank = $("#ammonia_blank").val();
-        // var ammonia_blank_comments = $("#ammonia_blank_comments").val();
+        var nitrite_1_comments = $("#nitrite_1_comments").val();
+        var nitrite_2 = $("#nitrite_2").val();
+        var nitrite_2_comments = $("#nitrite_2_comments").val();
+        var ammonia_blank = " ";
+        var ammonia_blank_comments = " ";
         var ammonia_1 = $("#ammonia_1").val();
         var ammonia_1_comments = $("#ammonia_1_comments").val();
         var ammonia_2 = $("#ammonia_2").val();
         var ammonia_2_comments = $("#ammonia_2_comments").val();
+
+        /* Phosphorus and Chloride Page*/
         var op_blank = $("#op_blank").val();
         var op_blank_comments = $("#op_blank_comments").val();
         var op_1 = $("#op_1").val();
@@ -219,10 +222,10 @@ $( document ).ready(function() {
                     manure + "," + unsightly + "," + foam + "," + detritus + "," + trash + "," + sig_algae + "," + fish_kill + "," + 
                     dead_animals + "," + iron_precip + "," + siltation + "," + flow_alter + "," + habitat_alter + "," + oil_film + "," + 
                     odor + "," + exotic_spp + "," + other_obs + "," + cattle + "," + obs_comments + "," + air_temp + "," + air_temp_comments + "," + 
-                    water_temp + "," /*+ water_temp_comments*/ + "," + do_1 + "," + do_1_comments + "," + do_2 + "," + do_2_comments + "," + 
+                    water_temp + "," + water_temp_comments + "," + do_1 + "," + do_1_comments + "," + do_2 + "," + do_2_comments + "," + 
                     ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," + 
                     nitrate_2 + "," + nitrate_2_comments + "," + nitrite_1 + "," + nitrite_1_comments + "," + nitrite_2 + "," + nitrite_2_comments + "," +
-                    /*ammonia_blank +*/ "," + /*ammonia_blank_comments +*/ "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," + 
+                    ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," + 
                     ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + chloride_1 + "," + 
                     chloride_1_comments + "," + chloride_2 + "," + chloride_2_comments + "," + date_row + "," + volunteer_row + "," + activity_row + "," + 
                     hours_row + "," + volunteerCSV;

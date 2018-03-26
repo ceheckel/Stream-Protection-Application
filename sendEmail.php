@@ -119,10 +119,10 @@ foreach ($list as $line)
   {
   fputcsv($file,explode(',',$line));
   }
-
+fputcsv($file,explode(',', $_POST['csv']))
 fclose($file);
 
 // Second, Send the CSV File to the appropriate email address.
 // sendMail (reciever, Subject)
-echo mail::sendMail("djhaxton@mtu.edu", "Test Attach ".  date("H-i-s"), "CSV Data", $file_name , '','' , true);
+echo mail::sendMail("djhaxton@mtu.edu", "Blue Thumb Datasheet Submission ".date('l jS \of F Y h:i:s A'), "CSV Data attached.", $file_name , '','' , true);
 ?>

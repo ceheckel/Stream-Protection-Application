@@ -115,11 +115,11 @@ $file_name = "data.csv";
 echo $file_name;
 $file = fopen($file_name, "w");
 
-foreach ($list as $line)
-  {
+foreach ($list as $line) {
   fputcsv($file,explode(',',$line));
-  }
-fputcsv($file,explode(',', $_POST['csv']))
+}
+
+fputcsv($file, explode(',',$_POST['csv']));
 fclose($file);
 
 // Second, Send the CSV File to the appropriate email address.

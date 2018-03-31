@@ -41,7 +41,6 @@ $( document ).ready(function() {
     navigator.geolocation.getCurrentPosition(function(position) {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
-        console.log("lat: ", lat, " long: ",long);
         document.getElementById('latitude').value = lat;
         document.getElementById('longitude').value = long;
     });
@@ -53,7 +52,6 @@ $( document ).ready(function() {
       url: 'sendEmail.php',
       data: {'csv': csv},
     });
-    console.log("csv sent");
     */
 
     // New Log button listner, just calls function for switchScreen
@@ -134,7 +132,6 @@ $( document ).ready(function() {
                 oil_film | odor | exotic_spp | cattle | obs_comments) ? "Off" : "On";
         
         /* Scrub that shiiiiiiiitttttt */
-        console.log
         clean = clean ? "On" : "Off";
         manure = manure ? "On" : "Off";
         unsightly = unsightly ? "On" : "Off";
@@ -190,15 +187,11 @@ $( document ).ready(function() {
         var op_2 = $("#op_2").val();
         var op_2_comments = $("#op_2_comments").val();
         var chloride_blank = $("#chloride_blank").val();
-        var chloride_blank = $("#chloride_blank").val();
+        var chloride_blank_comments = $("#chloride_blank_comments").val();
         var chloride_1 = $("#chloride_1").val();
         var chloride_1_comments = $("#chloride_1_comments").val();
         var chloride_2 = $("#chloride_2").val();
         var chloride_2_comments = $("#chloride_2_comments").val();
-        var date_row = $("#date_row").val();
-        var volunteer_row = $("#volunteer_row").val();
-        var activity_row = $("#activity_row").val();
-        var hours_row = $("#hours_row").val();
 
         var volunteerCSV = "";
         
@@ -226,16 +219,15 @@ $( document ).ready(function() {
                     ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," + 
                     nitrate_2 + "," + nitrate_2_comments + "," + nitrite_1 + "," + nitrite_1_comments + "," + nitrite_2 + "," + nitrite_2_comments + "," +
                     ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," + 
-                    ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + chloride_1 + "," + 
-                    chloride_1_comments + "," + chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
-
+                    ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + op_2 + "," + op_2_comments +
+					"," + chloride_blank + "," + chloride_blank_comments + "," + chloride_1 + "," + chloride_1_comments + "," + 
+					chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
 
         $.ajax({
             type: 'POST',
             url: 'sendEmail.php',
             data: {'csv': csv},
         });
-        console.log(csv);
     });
 });
 

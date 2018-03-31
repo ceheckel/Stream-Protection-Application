@@ -59,7 +59,7 @@
             </div>
         </div>
         <!-- PAGE 1: Start of New Log -->
-        <!-- Created by Charlese Heckel / Logan Wilson 3/3/2018 -->
+        <!-- Created by Charles Heckel / Logan Wilson 3/3/2018 -->
         <div id="newLogStart" class="container page col-md-offset-3 col-md-6">
             <span class="hamburgerButton" onclick="openNav()"><p onclick="openNav()">&#9776;</p></span>
             <div class="row title">
@@ -87,11 +87,11 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Lat</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="latitude" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="decimal" id="latitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Long</div>
-                <div class="col-xs-6"><input class="itemTextbox" type="number" id="longitude" /></div>
+                <div class="col-xs-6"><input class="itemTextbox" type="decimal" id="longitude" /></div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Time</div>
@@ -210,7 +210,7 @@
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
                         <input type="number" id="air_temp" class="form-control">
-                        <span class="input-group-addon">C°</span>
+                        <span class="input-group-addon">&deg;C</span>
                     </div>
                 </div>
             </div><div class="row formRow">
@@ -218,7 +218,7 @@
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
                         <input type="number" id="water_temp" class="form-control">
-                        <span class="input-group-addon">C°</span>
+                        <span class="input-group-addon">&deg;C</span>
                     </div>
                 </div>
             </div>
@@ -437,7 +437,8 @@
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_1_comments"/></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_1_comments"/></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
@@ -448,7 +449,8 @@
                             <span class="input-group-addon">mg/L DO</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_2_comments"/></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_2_comments"/></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
@@ -459,7 +461,8 @@
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_1_comments"/></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_1_comments"/></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
@@ -470,8 +473,10 @@
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_2_comments"/></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_2_comments"/></div> -->
             </div>
+            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="DO_pH_comments"></textarea></div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -494,7 +499,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_1_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_1_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
@@ -505,7 +511,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_2_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_2_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
@@ -516,7 +523,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_1_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_1_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
@@ -527,7 +535,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Blank</div>
@@ -548,7 +557,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_1_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_1_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 2</div>
@@ -559,8 +569,10 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_2_comments"></textarea></div>
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_2_comments"></textarea></div> -->
             </div>
+            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="N_comments"></textarea></div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>
@@ -588,10 +600,11 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="op_blank_comments"></textarea>
-                </div>
+                </div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 1</div>
@@ -604,10 +617,11 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="op_1_comments"></textarea>
-                </div>
+                </div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 2</div>
@@ -620,10 +634,11 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="op_2_comments"></textarea>
-                </div>
+                </div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Blank</div>
@@ -636,10 +651,11 @@
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
-                    <textarea class="itemTextarea" type="text" id="chloride_blank"></textarea>
-                </div>
+                    <textarea class="itemTextarea" type="text" id="chloride_blank_comments"></textarea>
+                </div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 1</div>
@@ -652,10 +668,11 @@
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="chloride_1_comments"></textarea>
-                </div>
+                </div> -->
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Test 2</div>
@@ -668,11 +685,13 @@
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
-                <div class="itemSubLabel col-xs-12">
+                <!-- removed by request -->
+                <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
                     <textarea class="itemTextarea" type="text" id="chloride_2_comments"></textarea>
-                </div>
+                </div> -->
             </div>
+            <div class="itemSubLabel col-xs-12" style="margin-bottom: 8px;" >Comments<textarea class="itemTextarea" type="text" id="P_Cl_comments"></textarea></div>
             <div class="row btnRow">
                 <div class="col-xs-6 "><button class="center-block btn navBackBtn">Back</button> </div>
                 <div class="col-xs-6 "><button class="center-block btn navForwardBtn">Next</button> </div>

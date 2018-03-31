@@ -309,7 +309,7 @@ body {
     position:absolute;
     left: 10px; 
     top: 10px;
-    color: #FFF !important;
+    color: #FFF;
     z-index:10;
 }
 

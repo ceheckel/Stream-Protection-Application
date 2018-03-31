@@ -34,7 +34,7 @@ $( document ).ready(function() {
             "<div class='row volunteerRow'>" +
                 "<div class='itemLabel col-xs-6'>Date</div>" +
                 "<div class='col-xs-6'>" +
-                    "<input class='itemTextbox' type='date' id='volunteer_date_" + volunteerCount + "' value='" + $("#volunteerDate_0").val() + "'/>" +
+                    "<input class='itemTextbox' type='date' id='volunteer_date_" + volunteerCount + "' value='" + $("#volunteer_date_0").val() + "'/>" +
                 "</div>" +
             "</div>" +
             "<div class='row volunteerRow'>" +

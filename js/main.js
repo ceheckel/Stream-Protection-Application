@@ -210,7 +210,7 @@ $( document ).ready(function() {
             let volunteerActivity = $("#volunteer_activity_" + i).val();
             let volunteerHours = $("#volunteer_hours_" + i).val();
 
-            volunteerCSV = volunteerCSV + volunteerName + "," + volunteerDate + "," + volunteerActivity + "," + volunteerHours + ",";
+            volunteerCSV = volunteerCSV + volunteerDate + "," + volunteerName + "," + volunteerActivity + "," + volunteerHours + ",";
         }
 
         volunteerCSV = volunteerCSV.substring(0, volunteerCSV.length - 1); // remove last comma
@@ -227,8 +227,7 @@ $( document ).ready(function() {
                     nitrate_2 + "," + nitrate_2_comments + "," + nitrite_1 + "," + nitrite_1_comments + "," + nitrite_2 + "," + nitrite_2_comments + "," +
                     ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," + 
                     ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + chloride_1 + "," + 
-                    chloride_1_comments + "," + chloride_2 + "," + chloride_2_comments + "," + date_row + "," + volunteer_row + "," + activity_row + "," + 
-                    hours_row + "," + volunteerCSV;
+                    chloride_1_comments + "," + chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
 
 
         $.ajax({

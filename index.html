@@ -27,12 +27,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
+        
         <!-- Import JS for pages -->
         <script src="js/volunteer.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Location -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZsPvH-k1xQ_iWbuzTmVTw5cZ_nXgyZg&sensor=false"></script>
+
+        <!-- Font Aweomse -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style.css">
@@ -42,13 +48,13 @@
         <!-- PAGE 1: HOME -->
         <!-- Created by Jake Mager -->
         <div id="home" class="container page col-md-offset-3 col-md-6">
-            <div class="row title">
+            <div class="row homeTitle">
                 <div class="col-md-12"><p class="text-center">Blue Thumb Datasheet</p></div>
             </div>
-            <div class="row title">
-                <div class="col-md-12 "><img class="center-block img-responsive" src='assets/logo.png' /></div>
+            <div class="row homeTitle">
+                <div class="col-md-12"><img id='logo' class="center-block img-responsive" src='assets/logo.png' /></div>
             </div>
-            <div class="row btnRow">
+            <div class="row homeBtnRow">
                 <div class="col-md-12"><button class="center-block homeButton btn" id="newLogBtn">New Log</button> </div>
             </div>
         </div>
@@ -144,7 +150,12 @@
                 </div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Wind Direction</div>
+                <div class="itemLabel col-xs-6">
+                    Wind Dir.
+                    <a data-toggle="tooltip" title="Where the wind is coming from">
+                        <i class="fas fa-question-circle"></i>
+                    </a>                   
+                </div>
                 <div class="col-xs-6">
                     <select id="wind_dir">
                         <option value="N">North</option>
@@ -517,6 +528,16 @@
                     </div>
                 </div>
                 <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div>
+            </div>
+            <div class="row formRow">
+                <div class="itemLabel col-xs-12">Ammonia Nitrogen Blank</div>
+                <div class="col-xs-4 itemSubLabel">Ammonia Blank</div>
+                <div class="col-xs-8">
+                    <div class="itemTextbox input-group">
+                        <input type="number" id="ammonia_blank" class="form-control">
+                        <span class="input-group-addon">mg/L N</span>
+                    </div>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>

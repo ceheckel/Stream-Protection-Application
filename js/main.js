@@ -237,6 +237,12 @@ $( document ).ready(function() {
         });
         console.log(csv);
     });
+
+    $('a[data-toggle="tooltip"]').tooltip({
+        animated: 'fade',
+        placement: 'bottom',
+    });
+
 });
 
 
@@ -257,7 +263,19 @@ function switchScreen(screenToShow) {
             $("#" + page).hide();
         }
     });
+
+    // Home screen has white BG compared to rest of app
+    if (screenToShow == "home") {
+        $('body').css('background-color', '#fff');
+        $('#main').css('background-color', '#fff');        
+        $('body').css('color', '#397bae');
+    } else {
+        $('body').css('background-color', '#397bae');
+        $('#main').css('background-color', '#397bae');        
+        $('body').css('color', 'rgb(51, 51, 51)');
+    }
 }
+
 
 
 // Side Navigation - Jake Mager

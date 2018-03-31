@@ -204,6 +204,13 @@
                         <span class="input-group-addon">Meters</span>
                     </div>
                 </div>
+                <div class="col-xs-6"></div>
+                <div class="col-xs-6" style="padding-left: 25px;">
+                <label class="form-check itemSubLabel" for="secchi_vis" style="margin-top: 10px;">Disk visible at bottom?
+                    <input class="form-check-input formRow-input" type="checkbox" value="" id="secchi_vis">
+                    <span class="checkmark"></span>
+                </label>
+                </div>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Air Temp.
@@ -438,8 +445,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 1</div>
-                <div class="col-xs-4 itemSubLabel">DO (Run)</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="do_1" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
@@ -450,8 +456,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">DO Test 2</div>
-                <div class="col-xs-4 itemSubLabel">DO (Run)</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="do_2" class="form-control">
                             <span class="input-group-addon">mg/L DO</span>
@@ -462,8 +467,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 1</div>
-                <div class="col-xs-4 itemSubLabel">pH</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="ph_1" class="form-control">
                             <span class="input-group-addon">SU</span>
@@ -474,8 +478,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">pH Test 2</div>
-                <div class="col-xs-4 itemSubLabel">pH</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="ph_2" class="form-control">
                             <span class="input-group-addon">SU</span>
@@ -500,8 +503,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 1</div>
-                <div class="col-xs-4 itemSubLabel">Nitrate</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrate_1" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -512,8 +514,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
-                <div class="col-xs-4 itemSubLabel">Nitrate</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrate_2" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -524,8 +525,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
-                <div class="col-xs-4 itemSubLabel">Nitrite</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrite_1" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -536,8 +536,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
-                <div class="col-xs-4 itemSubLabel">Nitrate</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrite_2" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -548,8 +547,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Blank</div>
-                <div class="col-xs-4 itemSubLabel">Ammonia Blank</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="ammonia_blank" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -558,8 +556,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>
-                <div class="col-xs-4 itemSubLabel">Ammonia</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="ammonia_1" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -570,8 +567,7 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 2</div>
-                <div class="col-xs-4 itemSubLabel">Ammonia</div>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="ammonia_2" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
@@ -598,11 +594,8 @@
                 <div class="col-md-12"><p class="text-center">Phosphorus and Chloride</p></div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Blank</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Orthophosphate Phosphorus</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Orthophosphate Phosphorus Blank</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="op_blank" />
                         <span class="input-group-addon">mg/L N</span>
@@ -615,11 +608,8 @@
                 </div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Test 1</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Orthophosphate Phosphorus</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Orthophosphate Phosphorus Test 1</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="op_1" />
                         <span class="input-group-addon">mg/L N</span>
@@ -632,11 +622,8 @@
                 </div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Test 2</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Orthophosphate Phosphorus</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Orthophosphate Phosphorus Test 2</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="op_2" />
                         <span class="input-group-addon">mg/L N</span>
@@ -649,11 +636,8 @@
                 </div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Blank</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Chloride</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Chloride Blank</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="chloride_blank" />
                         <span class="input-group-addon">mg/L Cl</span>
@@ -666,11 +650,8 @@
                 </div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Test 1</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Chloride</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Chloride Test 1</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="chloride_1" />
                         <span class="input-group-addon">mg/L Cl</span>
@@ -683,11 +664,8 @@
                 </div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Test 2</div>
-                <div class="itemSubLabel col-xs-5">
-                    <p>Chloride</p>
-                </div>
-                <div class="col-xs-7">
+                <div class="itemLabel col-xs-12">Chloride Test 2</div>
+                <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input class="form-control" type="number" id="chloride_2" />
                         <span class="input-group-addon">mg/L Cl</span>

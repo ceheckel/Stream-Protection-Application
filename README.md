@@ -5,7 +5,7 @@
 - Logan Wilson
 - Charles Heckel
 - Dustin Haxton
-- Brady Opshal
+- Brady Opsahl
 - Zac Paris 
 
 ### What's going on?

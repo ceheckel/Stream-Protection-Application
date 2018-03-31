@@ -45,14 +45,17 @@ $( document ).ready(function() {
         document.getElementById('longitude').value = long;
     });
 
-    /*  
-    var csv = "hello world";
-    $.ajax({
-      type: 'POST',
-      url: 'sendEmail.php',
-      data: {'csv': csv},
+    // validation
+    $('.ph').keyup(function() {
+        var phEl = $("#"+this.id);
+        var ph = phEl.val()
+        if (ph > 14 || ph < 0) {
+          phEl.css("border-color", "red");
+          alert("pH is between 0 and 14")
+        } else {
+          phEl.css("border-color", "white");
+        }
     });
-    */
 
     // New Log button listner, just calls function for switchScreen
     $('#newLogBtn').on('click touch', function() {

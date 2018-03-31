@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lan="en">
+<head>
+	<title>
+		Oklahoma Blue Thumb / BluTeam Reference Document
+	</title>
+</head>
+
+<body>
+	<div class="main.js">
+		<div id="documentLoad">
+			<h1>
+				main.js
+			</h1>
+			
+			<h3>
+				When the App loads
+			</h3>
+			
+			<p>
+				When the application loads, it first obtains the current date and time.<br/>
+				It then finds the location of the host device.<br/>
+			</p>
+			
+			<h3>
+				Submission
+			</h3>
+			
+			<p>
+				When the "Submit" button is pressed, the app gathers information supplied.  The information is as follows:<br/>
+			</p>
+			<ul>
+				<p><b>New Log Page</b></p>
+				<li>site_name</li>
+				<li>wbid</li>
+				<li>legal</li>
+				<li>county</li>
+				<li>date</li>
+				<li>latitude</li>
+				<li>longitude</li>
+				<li>site_time</li>
+				<li>sampler_1</li>
+				<li>sampler_2</li>
+				
+				<p><b>Site Conditions</b></p>
+				<li>weather</li>
+				<li>wind_spd</li>
+				<li>wind_dir</li>
+				<li>stage</li>
+				<li>stage_qual</li>
+				<li>secchi_depth</li>
+				<li>air_temp</li>
+				<li>water_temp</li>
+				
+				<p><b>Observations Page</b></p>
+				<li>clean</li>
+				<li>manure</li>
+				<li>unsightly</li>
+				<li>foam</li>
+				<li>detritus</li>
+				<li>trash</li>
+				<li>sig_algae</li>
+				<li>fish_kill</li>
+				<li>dead_animals</li>
+				<li>iron_precip</li>
+				<li>siltation</li>
+				<li>flow_alter</li>
+				<li>habitat_alter</li>
+				<li>oil_film</li>
+				<li>odor</li>
+				<li>exotic_spp</li>
+				<li>cattle</li>
+				<li>other_obs</li>
+				<li>obs_comments</li>
+				<li>site_obs_none</li>
+			</ul>
+			
+			<p>
+				The app then sanitizes the data values listed above.
+			</p>
+			
+			<ul>
+				<p><b>Bacteria Data</b></p>
+				<li>... This information is still pending ...</li>
+				
+				<p><b>Nitrogen Page</b></p>
+				<li>do_1</li>
+				<li>do_1_comments</li>
+				<li>do_2</li>
+				<li>do_2_comments</li>
+				<li>ph_1</li>
+				<li>ph_1_comments</li>
+				<li>ph_2</li>
+				<li>ph_2_comments</li>
+				<li>nitrate_1</li>
+				<li>nitrate_1_comments</li>
+				<li>nitrate_2</li>
+				<li>nitrate_2_comments</li>
+				<li>nitrite_1</li>
+				<li>nitrite_1_comments</li>
+				<li>nitrite_2</li>
+				<li>nitrite_2_comments</li>
+				<li>ammonia_blank</li>
+				<li>ammonia_blank_comments</li>
+				<li>ammonia_1</li>
+				<li>ammonia_1_comments</li>
+				<li>ammonia_2</li>
+				<li>ammonia_2_comments</li>
+				
+				<p><b>Phosporus and Chloride Page</b></p>
+				<li>op_blank</li>
+				<li>op_blank_comments</li>
+				<li>op_1</li>
+				<li>op_1_comments</li>
+				<li>op_2</li>
+				<li>op_2_comments</li>
+				<li>chloride_blank</li>
+				<li>chloride_1</li>
+				<li>chloride_1_comments</li>
+				<li>chloride_2</li>
+				<li>chloride_2_comments</li>
+				<li>date_row</li>
+				<li>volunteer_row</li>
+				<li>activity_row</li>
+				<li>hours_row</li>
+			</ul>
+			
+			<p>
+				After gathering and sanitizing information given from the user, the application now constructs two CSVs,<br/> one is a volunteer list, the other is for data points.<br/>
+				After the CSVs are created, the application prepares an ajax call to send an email to the scientists in Oklahoma.<br/>
+				
+			</p>
+		</div>
+		
+		<div id="externalCalls">
+			<h3>
+				External Function Calls
+			</h3>
+			
+			<h3>
+				switchScreen(String);
+			</h3>
+			
+			<p>
+				function:<br/>
+				&emsp;displays a subset of the data fields to give the illusion of navigating through separate pages.<br/>
+				<br/>
+				calls:<br/>
+				&emsp;newLogBtn<br/>
+				&emsp;&emsp;"New Log" button listener<br/>
+				<br/>
+				&emsp;navForwardBtn<br/>
+				&emsp;&emsp;"Forward" navigation button listener.  This gets the ID of the current page, then increments the index of the page array.<br/>
+				<br/>
+				&emsp;navBackBtn<br/>
+				&emsp;&emsp;"Back" navigation button listener.  This gets the ID of the current page, then decrements the index of the page array.<br/>
+				<br/>
+				&emsp;index.html<br/>
+				&emsp;&emsp;called from side navigation bar for each page<br/>
+			</p>
+			
+			<h3>
+				openNav()
+			</h3>
+			
+			<p>
+				function:<br/>
+				&emsp;displays a sidebar navigation menu<br/>
+				<br/>
+				calls:<br/>
+				&emsp;called from 'index.html' in several locations<br/>
+			</p>
+			
+			<h3>
+				closeNav()
+			</h3>
+			
+			<p>
+				function:<br/>
+				&emsp;hides the sidebar navigation menu<br/>
+				<br/>
+				calls:<br/>
+				&emsp;called from 'switchScreen()'<br/>
+				&emsp;called from 'index.html'<br/>
+			</p>
+		</div>
+	</div>
+	
+	<div class="volunteer.js">
+		<div id="documentLoad">
+			<h1>
+				volunteer.js
+			</h1>
+			
+			<h3>
+				When the App loads
+			</h3>
+			
+			<p>
+				The application adds a button listener to the "Add Volunteer" button.<br/>
+				The listener obtains a count of the current number of listed volunteers (up to 10), then adds some html for each of the volunteers.<br/>
+				The html creates fields for additional volunteer information.<br/>
+				After creating the html tags, the application saves the updated volunteer count.<br/>
+				<br/>
+				The application now adds a button listener to the "Remove Volunteer" button.<br/>
+				this listener gets the volunteer count and removes the most recently added volunteer (decrementing the volunteer count appropriately).<br/>
+			</p>
+		</div>
+		
+		<div id="externalCalls">
+		
+		</div>
+	</div>
+	
+	<div class="sendMail.php">
+		<div id="mail">
+			<h2>
+				"mail" class
+			</h2>
+			
+			<h3>
+				prepareAttachment($path) function
+			</h3>
+			
+			<p>
+				function:<br/>
+				&emsp;Creates a file that contains the ajax request information<br/>
+				<br/>
+				params:<br/>
+				&emsp;path the the file that will receive ajax information<br/>
+				<br/>
+				calls:<br/>
+				&emsp;called from sendMail()<br/>
+			</p>
+			
+			<h3>
+				sendMail() function
+			</h3>
+			
+			<p>
+				function:<br/>
+				&emsp;sets up the headers, addresses, receipients, and message for the email<br/>
+				<br/>
+				params:<br/>
+				&emsp;$to:		email receipient<br/>
+				&emsp;$subject:	subject of email<br/>
+				&emsp;$content:	body of email<br/>
+				&emsp;$path:	path to file containing ajax information<br/>
+				&emsp;$cc:		'carbon copy' receipients in email<br/>
+				&emsp;$bcc:		'black carbon copy' receipients in email<br/>
+				&emsp;$_headers: <br/>
+				<br/>
+				calls:<br/>
+				&emsp;call to mail()<br/>
+				&emsp;called from php in current file<br/>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

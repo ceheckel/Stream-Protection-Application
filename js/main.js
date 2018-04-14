@@ -12,7 +12,7 @@
 var pages = ["home", "newLogStart", "siteConditons", "observations", "bacteria", "doAndph", "nitrogen", "phosphorus", "volunteers"];
 
 // otherPages array
-// This holds any other pages that are not in the main app 
+// This holds any other pages that are not in the main app
 // like modals, help menus, etc.
 var otherPages = [];
 
@@ -20,7 +20,7 @@ var otherPages = [];
 
 
 $( document ).ready(function() {
-    
+
     // By Logan Wilson
     var d = new Date();
     var day = d.getDate();
@@ -30,7 +30,7 @@ $( document ).ready(function() {
     if (day < 10) day = "0" + day;
     document.getElementById('date').value = year + "-" + month + "-" + day;
 
-    // 
+    //
     var hours = d.getHours();
     var minutes = d.getMinutes();
     if (hours < 10) hours = "0" + hours;
@@ -43,18 +43,6 @@ $( document ).ready(function() {
         var long = position.coords.longitude;
         document.getElementById('latitude').value = lat;
         document.getElementById('longitude').value = long;
-    });
-
-    // validation
-    $('.ph').keyup(function() {
-        var phEl = $("#"+this.id);
-        var ph = phEl.val()
-        if (ph > 14 || ph < 0) {
-          phEl.css("border-color", "red");
-          alert("pH is between 0 and 14")
-        } else {
-          phEl.css("border-color", "white");
-        }
     });
 
     // New Log button listner, just calls function for switchScreen
@@ -83,40 +71,40 @@ $( document ).ready(function() {
     // Submit button listener
     // By Logan Wilson, Dustin Haxton
     $('#sendEmail').on('click touch', function() {
-        
+
         /* New Log Page */
         var site_name = $("#site_name").val();
         var wbid = $("#wbid").val();
-        var legal = $("#legal").val(); 
-        var county = $("#county").val(); 
-        var date = $("#date").val(); 
-        var latitude = $("#latitude").val(); 
-        var longitude = $("#longitude").val(); 
-        var site_time = $("#site_time").val(); 
-        var sampler_1 = $("#sampler_1").val(); 
+        var legal = $("#legal").val();
+        var county = $("#county").val();
+        var date = $("#date").val();
+        var latitude = $("#latitude").val();
+        var longitude = $("#longitude").val();
+        var site_time = $("#site_time").val();
+        var sampler_1 = $("#sampler_1").val();
         var sampler_2 = $("#sampler_2").val();
 
         /* Site Conditions */
-        var weather = $("#weather").val(); 
-        var wind_spd = $("#wind_spd").val(); 
-        var wind_dir = $("#wind_dir").val(); 
-        var stage = $("#stage").val(); 
-        var stage_qual = $("#stage_qual").val(); 
-        var secchi_depth = $("#secchi_depth").val(); 
+        var weather = $("#weather").val();
+        var wind_spd = $("#wind_spd").val();
+        var wind_dir = $("#wind_dir").val();
+        var stage = $("#stage").val();
+        var stage_qual = $("#stage_qual").val();
+        var secchi_depth = $("#secchi_depth").val();
         var secchi_vis = " ";           // no longer desired by BThumb
         var air_temp = $("#air_temp").val();
         var air_temp_comments = " ";    // no longer desired by BThumb
         var water_temp = $("#water_temp").val();
         var water_temp_comments = " ";  // no longer desired by BThumb
 
-        /* Observations Page */   
+        /* Observations Page */
         var clean = $("#clean").is(":checked");
-        var manure = $("#manure").is(":checked"); 
-        var unsightly = $("#unsightly").is(":checked"); 
-        var foam = $("#foam").is(":checked"); 
-        var detritus = $("#detritus").is(":checked"); 
-        var trash = $("#trash").is(":checked"); 
-        var sig_algae = $("#sig_algae").is(":checked"); 
+        var manure = $("#manure").is(":checked");
+        var unsightly = $("#unsightly").is(":checked");
+        var foam = $("#foam").is(":checked");
+        var detritus = $("#detritus").is(":checked");
+        var trash = $("#trash").is(":checked");
+        var sig_algae = $("#sig_algae").is(":checked");
         var fish_kill = $("#fish_kill").is(":checked");
         var dead_animals = $("#dead_animals").is(":checked");
         var iron_precip = $("#iron_precip").is(":checked");
@@ -129,11 +117,11 @@ $( document ).ready(function() {
         var cattle = $("#cattle").is(":checked");
         var other_obs = $("#other_obs").is(":checked");
         var obs_comments = $("#obs_comments").is(":checked");
-        var site_obs_none = (clean | manure | unsightly | foam |  
-                detritus | trash | sig_algae | fish_kill | dead_animals | 
+        var site_obs_none = (clean | manure | unsightly | foam |
+                detritus | trash | sig_algae | fish_kill | dead_animals |
                 iron_precip | siltation | flow_alter | habitat_alter |
                 oil_film | odor | exotic_spp | cattle | obs_comments) ? "Off" : "On";
-        
+
         /* Scrub that shiiiiiiiitttttt */
         clean = clean ? "On" : "Off";
         manure = manure ? "On" : "Off";
@@ -197,7 +185,7 @@ $( document ).ready(function() {
         var chloride_2_comments = $("#chloride_2_comments").val();
 
         var volunteerCSV = "";
-        
+
         // Get volunteers
         var volunteerCount = parseInt($("#volunteerCount").val()) + 1;
         for (let i = 0; i < volunteerCount; i++) {
@@ -212,18 +200,18 @@ $( document ).ready(function() {
         volunteerCSV = volunteerCSV.substring(0, volunteerCSV.length - 1); // remove last comma
 
         // Create CSV
-        var csv = site_name + "," + wbid + "," + legal + "," + county + "," + date + "," + latitude + "," + longitude + "," + 
-                    site_time + "," + sampler_1 + "," + sampler_2 + "," + weather + "," + wind_spd + "," + wind_dir + "," + 
-                    stage + "," + stage_qual + "," + secchi_depth + "," + secchi_vis + "," + site_obs_none + "," + clean + "," + 
-                    manure + "," + unsightly + "," + foam + "," + detritus + "," + trash + "," + sig_algae + "," + fish_kill + "," + 
-                    dead_animals + "," + iron_precip + "," + siltation + "," + flow_alter + "," + habitat_alter + "," + oil_film + "," + 
-                    odor + "," + exotic_spp + "," + other_obs + "," + cattle + "," + obs_comments + "," + air_temp + "," + air_temp_comments + "," + 
-                    water_temp + "," + water_temp_comments + "," + do_1 + "," + do_1_comments + "," + do_2 + "," + do_2_comments + "," + 
-                    ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," + 
+        var csv = site_name + "," + wbid + "," + legal + "," + county + "," + date + "," + latitude + "," + longitude + "," +
+                    site_time + "," + sampler_1 + "," + sampler_2 + "," + weather + "," + wind_spd + "," + wind_dir + "," +
+                    stage + "," + stage_qual + "," + secchi_depth + "," + secchi_vis + "," + site_obs_none + "," + clean + "," +
+                    manure + "," + unsightly + "," + foam + "," + detritus + "," + trash + "," + sig_algae + "," + fish_kill + "," +
+                    dead_animals + "," + iron_precip + "," + siltation + "," + flow_alter + "," + habitat_alter + "," + oil_film + "," +
+                    odor + "," + exotic_spp + "," + other_obs + "," + cattle + "," + obs_comments + "," + air_temp + "," + air_temp_comments + "," +
+                    water_temp + "," + water_temp_comments + "," + do_1 + "," + do_1_comments + "," + do_2 + "," + do_2_comments + "," +
+                    ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," +
                     nitrate_2 + "," + nitrate_2_comments + "," + nitrite_1 + "," + nitrite_1_comments + "," + nitrite_2 + "," + nitrite_2_comments + "," +
-                    ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," + 
+                    ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," +
                     ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + op_2 + "," + op_2_comments +
-					"," + chloride_blank + "," + chloride_blank_comments + "," + chloride_1 + "," + chloride_1_comments + "," + 
+					"," + chloride_blank + "," + chloride_blank_comments + "," + chloride_1 + "," + chloride_1_comments + "," +
 					chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
 
         $.ajax({
@@ -262,11 +250,11 @@ function switchScreen(screenToShow) {
     // Home screen has white BG compared to rest of app
     if (screenToShow == "home") {
         $('body').css('background-color', '#fff');
-        $('#main').css('background-color', '#fff');        
+        $('#main').css('background-color', '#fff');
         $('body').css('color', '#397bae');
     } else {
         $('body').css('background-color', '#397bae');
-        $('#main').css('background-color', '#397bae');        
+        $('#main').css('background-color', '#397bae');
         $('body').css('color', 'rgb(51, 51, 51)');
     }
 }

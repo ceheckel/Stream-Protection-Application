@@ -123,8 +123,8 @@ body {
 
 .formRow-inline {
     position: relative;
-    width: 100%;   
-    display: table; 
+    width: 100%;
+    display: table;
     border-collapse: separate;
 }
 
@@ -148,6 +148,19 @@ body {
 .volunteerBtnContainer {
     margin-top: 5px;
     background: #397bae;
+}
+
+/* alert for under a field */
+.inlineAlert {
+    color: red;
+    font-size: 12px;
+    box-shadow: none;
+    display: none;
+}
+.inlineNote {
+    font-size: 12px;
+    box-shadow: none;
+    color: white;
 }
 
 /*****************************************************************************/
@@ -217,6 +230,7 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 
 /*************************************************************/
 
@@ -304,10 +318,10 @@ body {
 }
 
 .hamburgerButton {
-    font-size:30px; 
-    cursor:pointer; 
+    font-size:30px;
+    cursor:pointer;
     position:absolute;
-    left: 10px; 
+    left: 10px;
     top: 10px;
     color: #FFF;
     z-index:10;

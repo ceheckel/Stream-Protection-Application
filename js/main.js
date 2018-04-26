@@ -231,12 +231,20 @@ $( document ).ready(function() {
             url: 'sendEmail.php',
             data: {'csv': csv},
         });
+
+
+        alert("Submitted datasheet!")
+        switchScreen(pages[0]);
+
     });
 
     $('a[data-toggle="tooltip"]').tooltip({
         animated: 'fade',
         placement: 'bottom',
     });
+
+
+
 
 });
 

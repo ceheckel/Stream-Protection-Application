@@ -9,6 +9,9 @@
 - Zac Paris 
 
 		Oklahoma Blue Thumb / BluTeam Reference Document
+		
+# Client
+	The CSV will be sent to the email declared at the top of send email.php - This must be replaced with the clients email!
 	
 # User Experience
 

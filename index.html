@@ -28,10 +28,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-        
+
         <!-- Import JS for pages -->
         <script src="js/volunteer.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/validation.js"></script>
 
         <!-- Google Location -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZsPvH-k1xQ_iWbuzTmVTw5cZ_nXgyZg&sensor=false"></script>
@@ -86,11 +87,19 @@
                 <div class="col-xs-6"><input class="itemTextbox" type="date" id="date" /></div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Lat</div>
+                <div class="itemLabel col-xs-6">Lat
+                  <a data-toggle="tooltip" title="If you don’t have a GPS locator app on your phone, check this list of OK stream locations tinyurl.com/y9pab633">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
                 <div class="col-xs-6"><input class="itemTextbox" type="decimal" id="latitude" /></div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Long</div>
+                <div class="itemLabel col-xs-6">Long
+                  <a data-toggle="tooltip" title="If you don’t have a GPS locator app on your phone, check this list of OK stream locations tinyurl.com/y9pab633">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
                 <div class="col-xs-6"><input class="itemTextbox" type="decimal" id="longitude" /></div>
             </div>
             <div class="row formRow">
@@ -152,9 +161,9 @@
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">
                     Wind Dir.
-                    <a data-toggle="tooltip" title="Where the wind is coming from">
+                    <a data-toggle="tooltip" title="Turn so the wind is blowing in your face. Record the direction you are now facing.">
                         <i class="fas fa-question-circle"></i>
-                    </a>                   
+                    </a>
                 </div>
                 <div class="col-xs-6">
                     <select id="wind_dir">
@@ -197,7 +206,11 @@
                 </div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-6">Secchi Depth</div>
+                <div class="itemLabel col-xs-6">Secchi Depth
+                  <a data-toggle="tooltip" title="Lower disk until you can no longer see contrast, note depth mark. (ex. third mark on the string = 0.3 meters)">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
                         <input type="number" min="0" id="secchi_depth" class="form-control">
@@ -214,9 +227,9 @@
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-6">Air Temp.
-                    <a data-toggle="tooltip" title="Measure for 2 minutes">
+                    <a data-toggle="tooltip" title="Hang thermometer in shade. Measure after two minutes.">
                         <i class="fas fa-question-circle"></i>
-                    </a>     
+                    </a>
                 </div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
@@ -226,9 +239,9 @@
                 </div>
             </div><div class="row formRow">
                 <div class="itemLabel col-xs-6">Water Temp.
-                    <a data-toggle="tooltip" title="Measure for 2 minutes">
+                    <a data-toggle="tooltip" title="Put bulb 15 cm below surface for 2 minutes and read while still in water.">
                         <i class="fas fa-question-circle"></i>
-                    </a>     
+                    </a>
                 </div>
                 <div class="col-xs-6">
                     <div class="itemTextbox input-group">
@@ -252,6 +265,11 @@
             </div>
             <!-- Checkbox "values" NEED to be changed when data is being pulled -->
             <!-- The id's NEED to be changed -->
+            <div class="row form-check formRow ">
+                <div class="itemLabel">
+                  Check all that apply
+                </div>
+            </div>
             <div class="row form-check formRow ">
                 <label class="form-check itemSubLabel" for="clean">Clean
                     <input class="form-check-input formRow-input" type="checkbox" value="" id="clean">
@@ -502,24 +520,36 @@
                 <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="do_2_comments"/></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">pH Test 1</div>
+                <div class="itemLabel col-xs-12">pH Test 1
+                  <a data-toggle="tooltip" title="If the color is not an exact match, interpolate between the two numbers, i.e., 6.5 or 7.9.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="ph_1" class="form-control ph">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
+                <span id="ph_1_alert" class="inlineAlert" >&nbsp;! Any pH between 5.5 - 9.5 is optimum. Please call if out of this range.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_1_comments"/></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">pH Test 2</div>
+                <div class="itemLabel col-xs-12">pH Test 2
+                  <a data-toggle="tooltip" title="If the color is not an exact match, interpolate between the two numbers, i.e., 6.5 or 7.9.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                             <input type="number" id="ph_2" class="form-control ph">
                             <span class="input-group-addon">SU</span>
                     </div>
                 </div>
+                <span id="ph_2_alert" class="inlineAlert" >&nbsp;! Any pH between 5.5 - 9.5 is optimum. Please call if out of this range.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment <input type="text" class="itemTextbox"  id="ph_2_comments"/></div> -->
             </div>
@@ -538,29 +568,46 @@
                 <div class="col-md-12"><p class="text-center">Nitrogen</p></div>
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 1</div>
+                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 1
+                  <a data-toggle="tooltip" title="Compare the top pad (farthest from your thumb) to the top bottle label at 30 seconds.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrate_1" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="nitrate_1_alert" class="inlineAlert" >&nbsp;! Call us if the Nitrate Nitrogen is 10 mg/L N or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_1_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2</div>
+                <div class="itemLabel col-xs-12">Nitrate Nitrogen Test 2
+                  <a data-toggle="tooltip" title="Compare the top pad (farthest from your thumb) to the top bottle label at 30 seconds.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrate_2" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="nitrate_2_alert" class="inlineAlert" >&nbsp;! Call us if the Nitrate Nitrogen is 10 mg/L N or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrate_2_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1</div>
+                <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 1
+                  <a data-toggle="tooltip" title="Compare the bottom pad (closest to your thumb) to the bottom bottle label at 60 seconds.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrite_1" class="form-control">
@@ -571,7 +618,12 @@
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_1_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2</div>
+                <div class="itemLabel col-xs-12">Nitrite Nitrogen Test 2
+                  <a data-toggle="tooltip" title="Compare the bottom pad (closest to your thumb) to the bottom bottle label at 60 seconds.">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
+
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="nitrite_2" class="form-control">
@@ -582,13 +634,19 @@
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="nitrite_2_comments"></textarea></div> -->
             </div>
             <div class="row formRow">
-                <div class="itemLabel col-xs-12">Ammonia Nitrogen Blank</div>
+                <div class="itemLabel col-xs-12">Ammonia Nitrogen Blank
+                  <a data-toggle="tooltip" title="Match the color of the sample to the color on the test cube after 15 minutes. Please interpolate (give a number in between the two if the colors don’t exactly match).">
+                      <i class="fas fa-question-circle"></i>
+                  </a>
+                </div>
                 <div class="col-xs-12">
                     <div class="itemTextbox input-group">
                         <input type="number" id="ammonia_blank" class="form-control">
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span class="inlineNote" >&nbsp;* Both blank and creekwater samples should start out yellow.</span>
+                <span id="ammonia_blank_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L NH3-N or more.</span>
             </div>
             <div class="row formRow">
                 <div class="itemLabel col-xs-12">Ammonia Nitrogen Test 1</div>
@@ -598,6 +656,7 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="ammonia_1_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L NH3-N or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_1_comments"></textarea></div> -->
             </div>
@@ -609,6 +668,7 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="ammonia_2_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L NH3-N or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">Comment<textarea class="itemTextarea" type="text" id="ammonia_2_comments"></textarea></div> -->
             </div>
@@ -637,6 +697,8 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span class="inlineNote" >&nbsp;* If you get a result of 40 (0.25 mg/L P) or more, conduct the OPP mid-range test.</span>
+                <span id="op_blank_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L P or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
@@ -651,6 +713,7 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="op_1_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L P or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
@@ -665,6 +728,7 @@
                         <span class="input-group-addon">mg/L N</span>
                     </div>
                 </div>
+                <span id="op_2_alert" class="inlineAlert" >&nbsp;! Please call us if you have 1.0 mg/L P or more.</span>
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
@@ -679,6 +743,8 @@
                         <span class="input-group-addon">mg/L Cl</span>
                     </div>
                 </div>
+                <span class="inlineNote" >&nbsp;* If color doesn’t change at 20 drops, retest using the high range test.</span>
+                <!-- <span id="chloride_blank_alert" class="inlineAlert" >&nbsp;! If your results are much higher than normal, please call.</span> -->
                 <!-- removed by request -->
                 <!-- <div class="itemSubLabel col-xs-12">
                     <p>Comments</p>
@@ -787,6 +853,6 @@
             <a onclick="switchScreen('phosphorus')">Phosphorus</a>
             <a onclick="switchScreen('volunteers')">Volunteers</a>
         </div>
-              
+
     </body>
 </html>

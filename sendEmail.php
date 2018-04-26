@@ -2,6 +2,9 @@
  <!-- Updated by Dustin Haxton on 03/24/2018 -->
 <?php
 
+$EMAIL = "PUT EMAIL HERE";
+
+
 // set the default timezone to use. Available since PHP 5.1
 date_default_timezone_set('UTC');
 
@@ -124,5 +127,5 @@ fclose($file);
 
 // Second, Send the CSV File to the appropriate email address.
 // sendMail (reciever, Subject)
-echo mail::sendMail("djhaxton@mtu.edu", "Blue Thumb Datasheet Submission ".date('l jS \of F Y h:i:s A'), "CSV Data attached.", $file_name , '','' , true);
+echo mail::sendMail($EMAIL, "Blue Thumb Datasheet Submission ".date('l jS \of F Y h:i:s A'), "CSV Data attached.", $file_name , '','' , true);
 ?>

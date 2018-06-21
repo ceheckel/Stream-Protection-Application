@@ -72,6 +72,8 @@ $( document ).ready(function() {
     // By Logan Wilson, Dustin Haxton
     $('#sendEmail').on('click touch', function() {
 
+console.log("In sendEmail");
+
         /* New Log Page */
         var site_name = $("#site_name").val();
         var wbid = $("#wbid").val();
@@ -116,7 +118,10 @@ $( document ).ready(function() {
         var exotic_spp = $("#exotic_spp").is(":checked");
         var cattle = $("#cattle").is(":checked");
         var other_obs = $("#other_obs").is(":checked");
-        var obs_comments = $("#obs_comments").is(":checked");
+
+        // var obs_comments = $("#obs_comments").is(":checked"); // RLP fixes 6-21-18
+        var obs_comments = $("#obs_comments").val() // RLP fixes 6-21-18
+
         var site_obs_none = (clean | manure | unsightly | foam |
                 detritus | trash | sig_algae | fish_kill | dead_animals |
                 iron_precip | siltation | flow_alter | habitat_alter |
@@ -141,22 +146,30 @@ $( document ).ready(function() {
         exotic_spp = exotic_spp ? "On" : "Off";
         cattle = cattle ? "On" : "Off";
         other_obs = other_obs ? "On" : "Off";
-        obs_comments = obs_comments ? "On" : "Off";
+        // obs_comments = obs_comments ? "On" : "Off"; // RLP fixes 6-21-
 
         /* Bacteria Data */
         // TODO: We should contact Blue Thumb about this... its not in the CSV.
 
-        /* Nitrogen Page */
+        /* DO & pH Page */
         var do_1 = $("#do_1").val();
-        var do_1_comments = $("#do_1_comments").val();
+
+        // var do_1_comments = $("#do_1_comments").val(); // RLP fixes 6-21-18
+        var do_1_comments = $("#DO_pH_comments").val(); // RLP fixes 6-21-18
+
         var do_2 = $("#do_2").val();
         var do_2_comments = $("#do_2_comments").val();
         var ph_1 = $("#ph_1").val();
         var ph_1_comments = $("#ph_1_comments").val();
         var ph_2 = $("#ph_2").val();
         var ph_2_comments = $("#ph_2_comments").val();
+
+        /* Nitrogen Page */
         var nitrate_1 = $("#nitrate_1").val();
-        var nitrate_1_comments = $("#nitrate_1_comments").val();
+
+        // var nitrate_1_comments = $("#nitrate_1_comments").val(); // RLP fixes 6-21-18
+        var nitrate_1_comments = $("#N_comments").val(); // RLP fixes 6-21-18
+
         var nitrate_2 = $("#nitrate_2").val();
         var nitrate_2_comments = $("#nitrate_2_comments").val();
         var nitrite_1 = $("#nitrite_1").val();
@@ -172,7 +185,10 @@ $( document ).ready(function() {
 
         /* Phosphorus and Chloride Page*/
         var op_blank = $("#op_blank").val();
-        var op_blank_comments = $("#op_blank_comments").val();
+
+        // var op_blank_comments = $("#op_blank_comments").val(); // RLP fixes 6-21-18
+        var op_blank_comments = $("#P_Cl_comments").val(); // RLP fixes 6-21-18
+
         var op_1 = $("#op_1").val();
         var op_1_comments = $("#op_1_comments").val();
         var op_2 = $("#op_2").val();
@@ -199,6 +215,12 @@ $( document ).ready(function() {
 
         volunteerCSV = volunteerCSV.substring(0, volunteerCSV.length - 1); // remove last comma
 
+        // Fix the comments so that they can have quotes and comman in them.
+        obs_comments = fixComments(obs_comments);
+        do_1_comments = fixComments(do_1_comments);
+        nitrate_1_comments = fixComments(nitrate_1_comments);
+        op_blank_comments = fixComments(op_blank_comments);
+
         // Create CSV
         var csv = site_name + "," + wbid + "," + legal + "," + county + "," + date + "," + latitude + "," + longitude + "," +
                     site_time + "," + sampler_1 + "," + sampler_2 + "," + weather + "," + wind_spd + "," + wind_dir + "," +
@@ -213,6 +235,9 @@ $( document ).ready(function() {
                     ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + op_2 + "," + op_2_comments +
 					"," + chloride_blank + "," + chloride_blank_comments + "," + chloride_1 + "," + chloride_1_comments + "," +
 					chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
+
+          console.log("CSV printout in sendMail");
+          console.log(csv);
 
         $.ajax({
             type: 'POST',
@@ -236,6 +261,21 @@ $( document ).ready(function() {
 
 });
 
+/*
+ * Function for comments that might have commas or quotes in them
+ * so they will work in the CSV.
+ * Written by Robert Pastel 6-21-2018
+ */
+ function fixComments(comment) {
+   /*
+    * RlP fixes for comments so they can have commas and quotes in them
+    *   1. need to replace any quote with double quoutes
+    *   2. then need to put quotes around the comments
+    */
+    comment = comment.replace(/"/g,'""'); // double up the quotes
+    comment = '"'+comment+'"'; // surround with quotes
+    return comment;
+ }
 
 // function switchScreen
 // screenToShow: string of next screen in pages array

@@ -148,16 +148,16 @@ $( document ).ready(function() {
         exotic_spp = exotic_spp ? "On" : "Off";
         cattle = cattle ? "On" : "Off";
         other_obs = other_obs ? "On" : "Off";
-        // obs_comments = obs_comments ? "On" : "Off"; // RLP fixes 6-21-
+        // obs_comments = obs_comments ? "On" : "Off"; // RLP fixes 6-21-18
 
         /* Bacteria Data */
         // TODO: We should contact Blue Thumb about this... its not in the CSV.
 
         /* DO & pH Page */
         var do_1 = $("#do_1").val();
+        var do_1_comments = $("#do_1_comments").val();
 
-        // var do_1_comments = $("#do_1_comments").val(); // RLP fixes 6-21-18
-        var do_1_comments = $("#DO_pH_comments").val(); // RLP fixes 6-21-18
+        var do_ph_comments = $("#DO_pH_comments").val(); // RLP fixes 6-21-18
 
         var do_2 = $("#do_2").val();
         var do_2_comments = $("#do_2_comments").val();
@@ -168,9 +168,9 @@ $( document ).ready(function() {
 
         /* Nitrogen Page */
         var nitrate_1 = $("#nitrate_1").val();
+        var nitrate_1_comments = $("#nitrate_1_comments").val();
 
-        // var nitrate_1_comments = $("#nitrate_1_comments").val(); // RLP fixes 6-21-18
-        var nitrate_1_comments = $("#N_comments").val(); // RLP fixes 6-21-18
+        var n_comments = $("#N_comments").val(); // RLP fixes 6-21-18
 
         var nitrate_2 = $("#nitrate_2").val();
         var nitrate_2_comments = $("#nitrate_2_comments").val();
@@ -187,9 +187,9 @@ $( document ).ready(function() {
 
         /* Phosphorus and Chloride Page*/
         var op_blank = $("#op_blank").val();
+        var op_blank_comments = $("#op_blank_comments").val();
 
-        // var op_blank_comments = $("#op_blank_comments").val(); // RLP fixes 6-21-18
-        var op_blank_comments = $("#P_Cl_comments").val(); // RLP fixes 6-21-18
+        var p_cl_comments = $("#P_Cl_comments").val(); // RLP fixes 6-21-18
 
         var op_1 = $("#op_1").val();
         var op_1_comments = $("#op_1_comments").val();
@@ -221,9 +221,11 @@ $( document ).ready(function() {
 
         // Fix the comments so that they can have quotes and comman in them. // RLP fixes 6-21-18
         obs_comments = fixComments(obs_comments);
-        do_1_comments = fixComments(do_1_comments);
-        nitrate_1_comments = fixComments(nitrate_1_comments);
-        op_blank_comments = fixComments(op_blank_comments);
+
+        do_ph_comments = fixComments(do_ph_comments);
+        n_comments = fixComments(n_comments);
+
+        p_cl_comments = fixComments(p_cl_comments);
 
         site_name = fixComments(site_name);
         sampler_1 = fixComments(sampler_1);
@@ -241,12 +243,12 @@ $( document ).ready(function() {
                     dead_animals + "," + iron_precip + "," + siltation + "," + flow_alter + "," + habitat_alter + "," + oil_film + "," +
                     odor + "," + exotic_spp + "," + other_obs + "," + cattle + "," + obs_comments + "," + air_temp + "," + air_temp_comments + "," +
                     water_temp + "," + water_temp_comments + "," + do_1 + "," + do_1_comments + "," + do_2 + "," + do_2_comments + "," +
-                    ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," +
+                    ph_1 + "," + ph_1_comments + "," + ph_2 + "," + ph_2_comments + "," + do_ph_comments + "," + nitrate_1 + "," + nitrate_1_comments + "," +
                     nitrate_2 + "," + nitrate_2_comments + "," + nitrite_1 + "," + nitrite_1_comments + "," + nitrite_2 + "," + nitrite_2_comments + "," +
                     ammonia_blank + "," + ammonia_blank_comments + "," + ammonia_1 + "," + ammonia_1_comments + "," + ammonia_2 + "," +
-                    ammonia_2_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + op_2 + "," + op_2_comments +
+                    ammonia_2_comments + "," + n_comments + "," + op_blank + "," + op_blank_comments + "," + op_1 + "," + op_1_comments + "," + op_2 + "," + op_2_comments +
 					"," + chloride_blank + "," + chloride_blank_comments + "," + chloride_1 + "," + chloride_1_comments + "," +
-					chloride_2 + "," + chloride_2_comments + "," + volunteerCSV;
+					chloride_2 + "," + chloride_2_comments + "," + p_cl_comments + "," + volunteerCSV;
 
           console.log("CSV printout in sendMail");
           console.log(csv);

@@ -72,8 +72,6 @@ $( document ).ready(function() {
     // By Logan Wilson, Dustin Haxton
     $('#sendEmail').on('click touch', function() {
 
-console.log("In sendEmail");
-
         /* New Log Page */
         var site_name = $("#site_name").val();
         var wbid = $("#wbid").val();
@@ -93,7 +91,11 @@ console.log("In sendEmail");
         var stage = $("#stage").val();
         var stage_qual = $("#stage_qual").val();
         var secchi_depth = $("#secchi_depth").val();
-        var secchi_vis = " ";           // no longer desired by BThumb
+
+        // var secchi_vis = " ";           // no longer desired by BThumb // RLP fixes 6-21-18. Apprently BThumb changed their mind.
+        var secchi_vis = $("#secchi_vis").is(":checked"); // RLP fixes 6-21-18.
+        // secchi_vis = secchi_vis ? "On" : "Off"; // RLP fixes 6-21-18. Maybe this is not appropiate
+
         var air_temp = $("#air_temp").val();
         var air_temp_comments = " ";    // no longer desired by BThumb
         var water_temp = $("#water_temp").val();
@@ -206,8 +208,10 @@ console.log("In sendEmail");
         var volunteerCount = parseInt($("#volunteerCount").val()) + 1;
         for (let i = 0; i < volunteerCount; i++) {
             let volunteerName = $("#volunteer_name_" + i).val();
+            volunteerName = fixComments(volunteerName); // RLP fixes 6-21-18
             let volunteerDate = $("#volunteer_date_" + i).val();
             let volunteerActivity = $("#volunteer_activity_" + i).val();
+            volunteerActivity = fixComments(volunteerActivity); // RLP fixes 6-21-18
             let volunteerHours = $("#volunteer_hours_" + i).val();
 
             volunteerCSV = volunteerCSV + volunteerDate + "," + volunteerName + "," + volunteerActivity + "," + volunteerHours + ",";
@@ -215,11 +219,19 @@ console.log("In sendEmail");
 
         volunteerCSV = volunteerCSV.substring(0, volunteerCSV.length - 1); // remove last comma
 
-        // Fix the comments so that they can have quotes and comman in them.
+        // Fix the comments so that they can have quotes and comman in them. // RLP fixes 6-21-18
         obs_comments = fixComments(obs_comments);
         do_1_comments = fixComments(do_1_comments);
         nitrate_1_comments = fixComments(nitrate_1_comments);
         op_blank_comments = fixComments(op_blank_comments);
+
+        site_name = fixComments(site_name);
+        sampler_1 = fixComments(sampler_1);
+        sampler_2 = fixComments(sampler_2);
+        wbid = fixComments(wbid);
+        legal = fixComments(legal);
+        county = fixComments(county);
+
 
         // Create CSV
         var csv = site_name + "," + wbid + "," + legal + "," + county + "," + date + "," + latitude + "," + longitude + "," +
